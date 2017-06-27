@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Сувенировед.ру</title>
+   <meta name="viewport" content="width=device-width">
+   <meta name="format-detection" content="telephone=no"/>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+   <meta name="robots" content="index, follow"/>
+   <meta name="keywords" content="Сувенировед.ру"/>
+   <meta name="description" content="Сувенировед.ру"/>
+   <meta name="apple-mobile-web-app-capable" content="yes"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+   <link rel="stylesheet" href="css/slick.css" type="text/css">
+   <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+   <link rel="stylesheet" href="css/SelectBoxIt.css" type="text/css">
+   <link rel="stylesheet" href="css/colorbox.css" type="text/css">
+   <link rel="stylesheet" href="css/style.css" type="text/css">
+   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+   <script type="text/javascript" src="js/slick.min.js"></script>
+   <script type="text/javascript" src="js/SelectBoxIt.js"></script>
+   <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+   <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+   <script type="text/javascript" src="js/selectric.js"></script>
+   <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<div id="page">
+
+   <header>
+      <nav>
+         <div class="container">
+            <ul class="list-nav clearfix">
+               <li><a href="#">О компании</a></li>
+               <li><a href="#">Как купить</a></li>
+               <li><a href="#">Доставка и оплата</a></li>
+               <li><a href="#">Контакты</a></li>
+               <li><a href="#">Нанесение логотипа</a></li>
+               <li><a href="#">Партнерам</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class="header-bottom">
+         <div class="container clearfix">
+            <div class="logo">
+               <a href="#">
+                  <img src="images/logo.png" alt=""/>
+               </a>
+            </div>
+            <div class="tel-block">
+               <a href="#" class="tel">8 (800) 265-80-80</a>
+               <span class="info">Звонок по РФ бесплатный</span>
+            </div>
+            <ul class="list-control clearfix">
+               <li class="mail">
+                  <a href="#">
+                     <span class="cout">3</span>
+                  </a>
+               </li>
+               <li class="basket">
+                  <a href="#">
+                     <span class="cout">11</span>
+                  </a>
+               </li>
+               <li class="user">
+                  <a href="#"></a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </header>
+
+   <section id="content" class="clearfix">
+
+      <div class="section-search">
+         <div class="container clearfix">
+            <a href="#" class="catalog-btn">КАТАЛОГ ПРОДУКЦИИ</a>
+            <div class="search">
+               <form>
+                  <div class="search-input">
+                     <input type="text" placeholder="Поиск продукции по сайту">
+                     <button type="submit" class="sub">НАЙТИ</button>
+                  </div>
+                  <div class="line">
+                     <div class="col">
+                        <label>Тираж</label>
+                        <input type="text">
+                     </div>
+                     <div class="col">
+                        <label>Цена от</label>
+                        <input type="text">
+                     </div>
+                     <div class="col">
+                        <label>Цена до</label>
+                        <input type="text">
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <a href="#" class="dop-search-btn">РАСШИРЕНЫЙ ПОИСК</a>
+         </div>
+      </div>
+
+      <section class="cart">
+         <div class="container">
+            <h2 class="cart__title title-md">Корзина товаров №001</h2>
+            <div class="steps steps_bordered">
+               <div class="steps__in">
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-cart-act"></div>
+                     <div class="steps__item-text steps__item-text_highlight">Формируем <br>заказ</div>
+                  </div>
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-car"></div>
+                     <div class="steps__item-text">ОСТАВЛЯЕМ <br>КОНТАКТНЫЕ ДАННЫЕ</div>
+                  </div>
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-circle-check"></div>
+                     <div class="steps__item-text">Подтверждаем <br>заказ</div>
+                  </div>
+               </div>
+            </div>
+            <form action="#">
+               <div class="cart-table clearfix">
+                  <div class="cart-table__col">
+                     <div class="cart-table__head">
+                        <div class="cart-table__title">НАИМЕНОВАНИЕ</div>
+                        <div class="cart-table__title">Цена за шт.</div>
+                        <div class="cart-table__title">Тираж</div>
+                        <div class="cart-table__title">Нанесение</div>
+                        <div class="cart-table__title">Примечание</div>
+                        <div class="cart-table__title">Итого</div>
+                     </div>
+                     <div class="cart-table__in">
+                        <div class="cart-table__item">
+                           <div class="cart-table__item-pic-wrap">
+                              <div class="cart-table__item-pic">
+                                 <img src="images/slide-image1.png" alt="img">
+                              </div>
+                           </div>
+                           <div class="cart-table__item-name">
+                              <div class="cart-table__item-article">Арт . <span>5795445</span></div>
+                              <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
+                           </div>
+                           <div class="cart-table__item-price">350,00</div>
+                           <div class="cart-table__item-count">
+                              <input type="text" placeholder="20">
+                           </div>
+                           <div class="cart-table__item-switch">
+                              <input type="checkbox" class="switch" id="item-switch-1">
+                              <label for="item-switch-1"></label>
+                           </div>
+                           <div class="cart-table__item-option switch-option">
+                              <input type="checkbox" id="item-option-1">
+                              <label for="item-option-1">+</label>
+                           </div>
+                           <div class="cart-table__item-result">
+                              <span>7000,00</span>
+                              <button class="cart-table__item-cancel-btn" type="button">
+                                 <i class="sprite sprite-cancel"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="cart-table__item">
+                           <div class="cart-table__item-pic-wrap">
+                              <div class="cart-table__item-pic">
+                                 <img src="images/slide-image1.png" alt="img">
+                              </div>
+                           </div>
+                           <div class="cart-table__item-name">
+                              <div class="cart-table__item-article">Арт . <span>5795445</span></div>
+                              <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
+                           </div>
+                           <div class="cart-table__item-price">350,00</div>
+                           <div class="cart-table__item-count">
+                              <input type="text" placeholder="20">
+                           </div>
+                           <div class="cart-table__item-switch">
+                              <input type="checkbox" class="switch" id="item-switch-2">
+                              <label for="item-switch-2"></label>
+                           </div>
+                           <div class="cart-table__item-option switch-option">
+                              <input type="checkbox" id="item-option-2">
+                              <label for="item-option-2">+</label>
+                           </div>
+                           <div class="cart-table__item-result">
+                              <span>7000,00</span>
+                              <button class="cart-table__item-cancel-btn" type="button">
+                                 <i class="sprite sprite-cancel"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="cart-table__item">
+                           <div class="cart-table__item-pic-wrap">
+                              <div class="cart-table__item-pic">
+                                 <img src="images/slide-image1.png" alt="img">
+                              </div>
+                           </div>
+                           <div class="cart-table__item-name">
+                              <div class="cart-table__item-article">Арт . <span>5795445</span></div>
+                              <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
+                           </div>
+                           <div class="cart-table__item-price">350,00</div>
+                           <div class="cart-table__item-count">
+                              <input type="text" placeholder="20">
+                           </div>
+                           <div class="cart-table__item-switch">
+                              <input type="checkbox" checked class="switch" id="item-switch-3">
+                              <label for="item-switch-3"></label>
+                           </div>
+                           <div class="cart-table__item-option switch-option">
+                              <input type="checkbox" id="item-option-3">
+                              <label for="item-option-3">+</label>
+                           </div>
+                           <div class="cart-table__item-result">
+                              <span>7000,00</span>
+                              <button class="cart-table__item-cancel-btn" type="button">
+                                 <i class="sprite sprite-cancel"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cart-table__col">
+                     <div class="cart-table__result">
+                        <div class="cart-table__result-price"><span>21 000,00</span>* руб.</div>
+                        <div class="cart-table__result-actions">
+                           <button class="cart-table__result-submit btn-red" type="button">ОФОРМИТЬ ЗАКАЗ</button>
+                           <button type="button" class="cart-table__result-actions-btn js-mockup-popup-open"><i
+                             class="sprite sprite-chain"></i><span>Добавить макет</span></button>
+                           <!--mockup popup-->
+                           <div class="mockup-popup js-mockup-popup">
+                              <form action="#">
+                                 <div class="mockup-popup__in">
+                                    <div class="mockup-popup__title">Прикрепите макет</div>
+                                    <div class="mockup-popup__actions">
+                                       <div class="mockup-popup__send">
+                                          <input type="file" id="file">
+                                          <label class="mockup-popup__send-btn btn-white" for="file"><i class="sprite sprite-chain"></i>Прикрепите файл</label>
+                                       </div>
+                                       <a href='#!' class="mockup-popup__send-link"><span>Требования к макетам</span></a>
+                                    </div>
+                                    <div class="mockup-popup__message">
+                                       <textarea name="" placeholder="Комментарий"></textarea>
+                                    </div>
+                                    <button class="mockup-popup__submit-btn btn-red" type="submit">ОТПРАВИТЬ</button>
+                                 </div>
+                              </form>
+                           </div>
+                           <button type="button" class="cart-table__result-actions-btn"><i
+                             class="sprite sprite-delete"></i><span>Удалить заказ</span></button>
+                           <button type="button" class="cart-table__result-actions-btn"><i
+                             class="sprite sprite-price-list"></i><span>Цены на несение</span></button>
+                        </div>
+                     </div>
+                     <div class="cart-table__order-id">
+                        <div class="cart-table__order-id-title">ID заказа</div>
+                        <span>(заполняется менеджером)</span>
+                        <div class="cart-table__input input-default">
+                           <input type="text" placeholder="Самара">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cart-table__row">
+                     <p class="cart-table__descr"><sub>*</sub> Стоимость указана без учета стоимости печати, упаковки и
+                                                               доставки. Общую стоимость определит менеджер после
+                                                               окончательного оформления заказа.
+                     </p>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+      <div class="decor-default"></div>
+      <section class="cart">
+         <div class="container">
+            <h2 class="cart__title title-md">Корзина товаров №001</h2>
+            <div class="steps steps_bordered">
+               <div class="steps__in">
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-cart"></div>
+                     <div class="steps__item-text">Формируем <br>заказ</div>
+                  </div>
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-car-act"></div>
+                     <div class="steps__item-text steps__item-text_highlight">ОСТАВЛЯЕМ <br>КОНТАКТНЫЕ ДАННЫЕ</div>
+                  </div>
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-circle-check"></div>
+                     <div class="steps__item-text">Подтверждаем <br>заказ</div>
+                  </div>
+               </div>
+            </div>
+            <form action="#">
+               <div class="cart__form">
+                  <div class="cart__form-row">
+                     <div class="cart__form-col">
+                        <div class="cart__form-title">ГОРОД<sub>*</sub></div>
+                        <select class="js-select" name="" id="">
+                           <option value="Самара">Самара</option>
+                           <option value="Самара">Самара</option>
+                           <option value="Самара">Самара</option>
+                           <option value="Самара">Самара1</option>
+                        </select>
+                        <p class="cart__form-descr cart__form-descr_abs"><sub>*</sub> Поля обязательные для заполнения
+                        </p>
+                     </div>
+                     <div class="cart__form-col">
+                        <div class="checkbox-default">
+                           <input id="delivery-1" type="checkbox">
+                           <label for="delivery-1">
+                              <span>Самовывоз</span>
+                           </label>
+                        </div>
+                        <div class="checkbox-default">
+                           <input id="delivery-2" type="checkbox">
+                           <label for="delivery-2">
+                              <span>Доставка</span>
+                           </label>
+                        </div>
+                     </div>
+                     <div class="cart__form-col">
+                        <div class="cart__form-title">Адрес доставки</div>
+                        <div class="cart__form-field cart__form-field_lg input-default">
+                           <input type="text" value="Самара">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cart__form-row">
+                     <div class="cart__form-title cart__form-title_big">Контактная информация</div>
+                     <div class="cart__form-field input-default"><input type="text" placeholder="Ваше ФИО"></div>
+                     <div class="cart__form-field input-default"><input class="tel-mask" type="text"
+                                                                        placeholder="+7 ( ___ ) __ - __ - ___ "></div>
+                     <div class="cart__form-field input-default"><input type="text" placeholder="Ваш e-mail"></div>
+                     <div class="cart__form-message">
+                        <textarea name="" placeholder="Оставить коментарий"></textarea>
+                     </div>
+                  </div>
+                  <div class="cart__form-actions">
+                     <button type="button" class="btn-white">Вернуться к формированию заказа</button>
+                     <button type="submit" class="btn-red">Оформить заказ*</button>
+                  </div>
+                  <div class="cart__form-text">
+                     <p class="cart__form-descr"><sub>*</sub> Нажимая на кнопку "Оформить заказ" вы даете согласие на
+                                                              обработку персональных данных.</p>
+                     <p class="cart__form-descr">Политика конфиденциальности компании доступна <a href="#!">по
+                                                                                                            ссылке.</a>
+                     </p>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+      <div class="decor-default"></div>
+      <section class="cart">
+         <div class="container">
+            <h2 class="cart__title title-md">Корзина товаров №001</h2>
+            <div class="steps steps_bordered">
+               <div class="steps__in">
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-cart"></div>
+                     <div class="steps__item-text">Формируем <br>заказ</div>
+                  </div>
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-car"></div>
+                     <div class="steps__item-text">ОСТАВЛЯЕМ <br>КОНТАКТНЫЕ ДАННЫЕ</div>
+                  </div>
+                  <div class="steps__item">
+                     <div class="steps__item-pic sprite sprite-circle-check-act"></div>
+                     <div class="steps__item-text steps__item-text_highlight">Подтверждаем <br>заказ</div>
+                  </div>
+               </div>
+            </div>
+            <div class="cart__success">
+               <div class="cart__success-title">Заказ оформлен!</div>
+               <div class="cart__success-icon sprite sprite-circle-check-lg"></div>
+               <div class="cart__success-text">
+                  <p>Письмо с содержанием вашего заказа отправлено вам на почту.</p>
+                  <p>Наш менеджер свяжется с вами для подтверждения заказа и расскажет вам об условиях оплаты.</p>
+                  <p>По всем вопросам вы можете связаться с нами по телефону: <a href="tel:99999">8 (800) 123-45-67</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </section>
+
+
+   <footer>
+      <div class="container clearfix">
+         <div class="footer-left">
+            <div class="list-nav clearfix">
+               <div class="col">
+                  <div class="tit">Сувенировед.ру</div>
+                  <ul class="list">
+                     <li><a href="#">О компании</a></li>
+                     <li><a href="#">Полезная информация</a></li>
+                     <li><a href="#">Наши дилеры</a></li>
+                     <li><a href="#">Как стать дилером</a></li>
+                     <li><a href="#">Контакты</a></li>
+                  </ul>
+               </div>
+               <div class="col">
+                  <div class="tit">нанесение логотипа</div>
+                  <ul class="list">
+                     <li><a href="#">Виды нанесения</a></li>
+                     <li><a href="#">Шелкография</a></li>
+                     <li><a href="#">Гравировка</a></li>
+                     <li><a href="#">Деколь</a></li>
+                     <li><a href="#">Вышивка</a></li>
+                  </ul>
+               </div>
+               <div class="col">
+                  <div class="tit">помощь по сайту</div>
+                  <ul class="list">
+                     <li><a href="#">Как купить?</a></li>
+                     <li><a href="#">Как пользоваться
+                                     личным кабинетом?</a></li>
+                     <li><a href="#">Вопросы и ответы</a></li>
+                     <li><a href="#">Задать вопрос</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="logo">
+               <a href="#">
+                  <img src="images/logo2.png" alt=""/>
+               </a>
+            </div>
+            <div class="copyright">© 2017 <a href="#">www.suveniroved.ru</a> - Один из крупнейших в России
+                                   интернет-каталогов Сувениров, подарков и сувенирной продукции. При использовании
+                                   материалов сайта, ссылка на источник бязательна.
+            </div>
+         </div>
+         <div class="contact">
+            <div class="tit">Связаться с нами</div>
+            <ul class="list-contact">
+               <li>
+                  <div class="city">МОСКВА</div>
+                  <p>Адрес: ул. Яккиманка 45/3</p>
+                  <span class="tel">8-499 197-19-70</span>
+               </li>
+               <li>
+                  <div class="city">САМАРА</div>
+                  <p>Адрес: ул. Яккиманка 45/3</p>
+                  <span class="tel">8-846 265-80-80</span>
+               </li>
+               <li>
+                  <div class="city">ТОЛЬЯТТИ</div>
+                  <p>Адрес: ул. Яккиманка 45/3</p>
+                  <span class="tel">8-8482 70-40-40</span>
+               </li>
+               <li>
+                  <div class="city">САРАТОВ</div>
+                  <p>Адрес: ул. Яккиманка 45/3</p>
+                  <span class="tel">8-8452 33-86-90</span>
+               </li>
+            </ul>
+         </div>
+         <div class="soc-col">
+            <div class="tit">МЫ В СЕТИ</div>
+            <ul class="soc-list clearfix">
+               <li>
+                  <a href="#">
+                     <img src="images/icon-f.png" alt=""/>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/icon-t.png" alt=""/>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/icon-vk.png" alt=""/>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="images/icon-i.png" alt=""/>
+                  </a>
+               </li>
+            </ul>
+            <div class="mail">
+               <a href="#">sales@suveniroved.ru</a>
+            </div>
+            <a href="#" class="write-btn">НАПИСАТЬ</a>
+            <div class="dev">Сделано руками<br/>
+               <a href="#">Актиком</a></div>
+         </div>
+      </div>
+   </footer>
+</div>
+</body>
+</html>
+

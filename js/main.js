@@ -52,8 +52,6 @@ $(function () {
     $(this).attr('placeholder', $(this).data('placeholder'));
   });
 
-  $(".select").selectBoxIt({});
-
   jQuery(function ($) {
     $(".tel-mask").mask("+7 ( 999 ) 99 - 99 - 999");
   });

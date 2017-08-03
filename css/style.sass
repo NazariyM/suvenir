@@ -2003,16 +2003,27 @@ footer
 				max-width: 100%
 
 .section-card
-	display: inline-block
+	display: flex
+	justify-content: space-between
 	width: 100%
 	padding: 26px 0
+	+sm
+		flex-wrap: wrap
 	&__padding
 		padding-bottom: 60px
+		+md
+			padding-bottom: 30px
 	.category-filter-list
-		float: left
-		width: 240px
+		flex: 0 0 200px
+		padding-right: 15px
+		+sm
+			flex: 1 1 100%
+			text-align: center
+			padding-right: 0
 
 .category-filter-list
+	+sm
+		order: 2
 	.item
 		margin: 18px 0
 		.tit
@@ -2088,9 +2099,11 @@ footer
 					background-position: bottom center
 
 .section-card .product-card-wrap
-	float: right
-	width: 825px
+	flex: 0 1 825px
 	padding-top: 24px
+	+sm
+		flex: 1 1 100%
+		padding-top: 0
 
 .product-card-wrap
 	ul.head-list
@@ -2138,6 +2151,9 @@ footer
 		color: #4d4d4f
 		line-height: 52px
 		margin-bottom: 14px
+		+sm
+			font-size: 25px
+			margin-bottom: 0
 
 .product-gallery
 	display: inline-block
@@ -2687,15 +2703,25 @@ footer
 	.item
 		display: inline-block
 		vertical-align: top
-		width: 255px
+		width: calc(33.33333% - 30px)
+		max-width: 260px
+		min-width: 260px
 		min-height: 339px
 		border-radius: 3px
 		border: 1px solid #e0e1e2
 		padding: 19px 22px 15px 18px
-		margin-right: 30px
-		margin-bottom: 30px
-		&:nth-of-type(4n)
-			margin-right: 0
+		margin: 0 15px 30px
+		+lg
+			width: calc(33.33333% - 10px)
+			margin: 0 5px 10px
+		+md
+			width: calc(50% - 16px)
+			margin: 0 8px 16px
+			min-height: 410px
+		+sm
+			//width: calc(33.33333% - 8px)
+			//padding: 15px
+			//margin: 0 4px 10px
 		.text
 			width: 161px
 			float: right
@@ -2739,6 +2765,8 @@ footer
 					position: absolute
 					display: none
 					padding-top: 4px
+					+md
+						display: block
 					&-text
 						margin-bottom: 4px
 						&:last-child
@@ -2771,6 +2799,8 @@ footer
 	background: url(../images/footer-bg.jpg) top center no-repeat
 	background-repeat: repeat-y
 	background-size: cover
+	+sm
+		background-size: 300%
 	h2
 		font-family: 'Roboto-Medium'
 		font-size: 35px
@@ -2778,11 +2808,15 @@ footer
 		letter-spacing: 0.4px
 		text-transform: uppercase
 		margin-bottom: 9px
+		+sm
+			font-size: 30px
 	h3
 		font-family: 'Roboto-Medium'
 		font-size: 30px
 		color: #000000
 		line-height: 48px
+		+sm
+			line-height: 30px
 	p
 		font-family: 'Roboto-Light'
 		font-size: 16px
@@ -2818,17 +2852,26 @@ footer
 	position: relative
 	margin-top: -8px
 	margin-bottom: 30px
-	min-height: 200px
 	padding: 25px 30px 20px 30px
 	border-radius: 3px
 	border: 1px solid #e0e1e2
 	background-color: #f7f7f7
 	color: #4d4d4f
+	+lg
+		padding: 22px 18px 20px 18px
+	+md
+		padding: 20px 14px 20px 14px
+		max-width: 825px
+		margin: 0 auto 20px
 	&__view
 		position: absolute
 		top: -40px
 		right: 0
 		font-size: 0
+		+sm
+			top: auto
+			bottom: 30px
+			right: 15px
 		&::after
 			position: absolute
 			top: -5px
@@ -2855,19 +2898,43 @@ footer
 			
 	&__row
 		font-size: 0
+		+md
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			align-items: flex-start
+		+sm
+			flex-direction: column
+			align-items: center
+		&::after
+			+md
+				display: none
 		&:first-child
 			padding-bottom: 30px
+			+md
+				padding-bottom: 15px
 		&:last-child
 			display: flex
 			align-items: center
 			justify-content: space-between
 			padding-top: 25px
 			border-top: 1px dashed #e0e1e2
+			+md
+				padding-top: 15px
+				text-align: center
 	&__col
 		float: left
 		font-size: 15px
+		+md
+			float: none
 		&:nth-child(1)
 			padding-right: 40px
+			+md
+				flex: 0 0 auto
+				padding-right: 0
+		&:nth-child(2)
+			+md
+				flex: 0 0 auto
 		&:nth-child(3)
 			float: right
 			padding-right: 0
@@ -2875,10 +2942,24 @@ footer
 		margin-bottom: 10px
 		font-size: 15px
 	&__sex-checkbox
+		+md
+			display: inline-block
 		& + &
 			margin-top: 10px
+			+md
+				margin-top: 0
+				margin-left: 20px
 	&__count
 		font-size: 0
+		+md
+			display: flex
+			align-items: center
+		+sm
+			margin-top: 15px
+		.filter__name
+			+md
+				margin-bottom: 0
+				margin-right: 10px
 		&-field
 			display: inline-block
 			vertical-align: middle
@@ -2893,9 +2974,29 @@ footer
 				font-size: 14px
 	&__sort
 		font-size: 0
+		+md
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			flex: 1 1 100%
+			margin-top: 15px
+			float: none
+		+sm
+			flex: 1 1 100%
+			margin-top: 15px
+			float: none
+			align-self: flex-start
+			align-items: center
+			width: 100%
+			flex-direction: column
+		.filter__name
+			+md
+				flex: 1 1 100%
 	&__sort-col
 		display: inline-block
 		vertical-align: middle
+		+sm
+			width: 100% !important
 		&:nth-child(2)
 			width: 86px
 		&:nth-child(3)
@@ -2906,10 +3007,21 @@ footer
 			width: 156px
 		& + &
 			margin-left: 10px
+			+md
+				margin-left: 0
+				margin-top: 15px
 	&__submit-btn
 		padding: 0 29px
+		+md
+			margin: 15px auto 0
+		+sm
+			margin: 15px auto 0 0
 	&__price
 		font-size: 0
+		+md
+			display: flex
+			justify-content: space-around
+			width: 100%
 		input
 			width: 70px
 			height: 30px
@@ -2927,8 +3039,12 @@ footer
 			display: inline-block
 			vertical-align: middle
 			padding-right: 20px
+			+md
+				padding-right: 0
 			&:first-child
 				padding-right: 30px
+				+md
+					padding-right: 0
 	&__selectric .selectric
 		height: 30px
 		border-width: 1px
@@ -2981,8 +3097,14 @@ footer
 		color: #000
 		text-align: center
 	&__items
-		margin-top: 25px
 		position: relative
+		margin: 25px -15px 0
+		+lg
+			margin: 20px -8px 0
+		+md
+			margin: 20px -4px 0
+		+sm
+			text-align: center
 		.item
 			position: relative
 			overflow: hidden
@@ -3004,9 +3126,13 @@ footer
 				border: 2px solid #e0e1e2
 				transition: .3s
 				transform: scale(.9)
+				+md
+					display: none
 			&:hover
 				overflow: visible
 				border-color: transparent
+				+md
+					border-color: #e0e1e2
 			&:hover::after
 				opacity: 1
 				transform: scale(1)
@@ -3014,10 +3140,8 @@ footer
 				display: block
 			&:hover .new-label
 				transform: translateX(8px)
-			&:nth-child(3n)
-				margin-right: 0
-			&:nth-of-type(4n)
-				margin-right: 30px
+				+md
+					transform: translateX(0)
 			.new-label
 				position: absolute
 				top: 10px
@@ -3034,6 +3158,8 @@ footer
 				transform: translateX(65px)
 				will-change: transform
 				color: #fff
+				+md
+					transform: translateX(0)
 				&__icon
 					position: absolute
 					top: 0
@@ -3059,8 +3185,7 @@ footer
 	background-position: 164px 12px
 	cursor: pointer
 	background-image: url(../images/more-icon.png)
-	&:hover
-		background: #000
+	transition: background-color .3s, color .3s
 	
 .pagination
 	padding: 30px 0 0
@@ -3072,11 +3197,9 @@ footer
 		li
 			display: inline-block
 			vertical-align: middle
-			height: 35px
 			border-radius: 3px
 			border: 1px solid #e0e1e2
 			background-color: #ffffff
-			line-height: 35px
 			text-align: center
 			overflow: hidden
 			margin-right: 5px
@@ -3087,6 +3210,8 @@ footer
 				border-color: transparent
 				color: #fff
 			a
+				height: 35px
+				line-height: 35px
 				padding: 0 13px
 				display: block
 				font-size: 14px
@@ -3095,6 +3220,11 @@ footer
 				font-family: 'Roboto-Medium'
 				text-transform: uppercase
 				transition: .2s
+				+sm
+					height: 30px
+					line-height: 30px
+					padding: 0 11px
+					font-size: 13px
 				&:hover
 					background-color: #de4d4f
 					color: #fff

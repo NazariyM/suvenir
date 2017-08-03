@@ -89,13 +89,11 @@ textarea.error, select.error
 	font-weight: normal
 	font-style: normal
 
-
 @font-face
 	font-family: 'Roboto-Bold'
 	src: url('../fonts/RobotoB/Roboto-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/RobotoB/Roboto-Bold.woff') format("woff"), url('../fonts/RobotoB/Roboto-Bold.ttf') format("truetype"), url('../fonts/RobotoB/Roboto-Bold.svg#Roboto-Bold') format("svg")
 	font-weight: normal
 	font-style: normal
-
 
 @font-face
 	font-family: 'Roboto-Medium'
@@ -103,13 +101,11 @@ textarea.error, select.error
 	font-weight: normal
 	font-style: normal
 
-
 @font-face
 	font-family: 'Roboto-Light'
 	src: url('../fonts/RobotoL/Roboto-Light.eot?#iefix') format("embedded-opentype"), url('../fonts/RobotoL/Roboto-Light.woff') format("woff"), url('../fonts/RobotoL/Roboto-Light.ttf') format("truetype"), url('../fonts/RobotoL/Roboto-Light.svg#Roboto-Light') format("svg")
 	font-weight: normal
 	font-style: normal
-
 
 @font-face
 	font-family: 'BebasNeueRegular'
@@ -117,13 +113,11 @@ textarea.error, select.error
 	font-weight: normal
 	font-style: normal
 
-
 @font-face
 	font-family: 'Roboto-Black'
 	src: url('../fonts/RobotoBlack/Roboto-Black.eot?#iefix') format("embedded-opentype"), url('../fonts/RobotoBlack/Roboto-Black.woff') format("woff"), url('../fonts/RobotoBlack/Roboto-Black.ttf') format("truetype"), url('../fonts/RobotoBlack/Roboto-Black.svg#Roboto-Black') format("svg")
 	font-weight: normal
 	font-style: normal
-
 
 .clearfix:after
 	content: ''
@@ -145,6 +139,7 @@ textarea.error, select.error
 		height: 0px
 		visibility: hidden
 		overflow: hidden
+
 =vertical
 	text-align: center
 	font-size: 0
@@ -154,17 +149,19 @@ textarea.error, select.error
 		vertical-align: middle
 		width: 0
 		height: 100%
-		
+
 =r($width)
 	@media only screen and (max-width: $width+ "px")
 		@content
-		
+
 =lg
 	+r(1200)
 		@content
+
 =md
 	+r(1023)
 		@content
+
 =sm
 	+r(767)
 		@content
@@ -246,7 +243,7 @@ body
 				transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s
 	+r(767)
 		display: block
-	
+
 header
 	nav
 		height: 50px
@@ -272,6 +269,7 @@ header
 				flex-direction: column
 				justify-content: center
 				background: #f7f7f7
+				overflow: auto
 			li
 				float: left
 				margin-right: 36px
@@ -331,7 +329,7 @@ header
 			display: block
 			width: 100%
 			+md
-				transform: translate3d(0,0,0)
+				transform: translate3d(0, 0, 0)
 	.tel-block
 		display: inline-block
 		vertical-align: middle
@@ -443,7 +441,7 @@ header
 			margin: 0 auto
 			width: 100%
 			padding-top: 63%
-			
+
 .slider.slider-main
 	padding: 0 20px
 	+md
@@ -563,13 +561,13 @@ header
 	+md
 		padding: 20px 0
 	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
 		+md
-			display: flex
 			flex-direction: column
-			align-items: center
+	
 	.catalog-btn
-		float: left
-		display: inline-block
 		font-family: 'Roboto-Bold'
 		font-size: 14px
 		color: #4d4d4f
@@ -577,7 +575,6 @@ header
 		text-decoration: none
 		text-transform: uppercase
 		margin-left: 33px
-		margin-top: 48px
 		padding-bottom: 0
 		position: relative
 		border-bottom: 1px solid #777779
@@ -604,8 +601,6 @@ header
 			top: calc(50% - 12px)
 			left: -33px
 	.dop-search-btn
-		float: right
-		display: inline-block
 		font-family: 'Roboto-Bold'
 		font-size: 14px
 		color: #4d4d4f
@@ -613,7 +608,6 @@ header
 		text-decoration: none
 		text-transform: uppercase
 		margin-left: 33px
-		margin-top: 50px
 		padding-bottom: 0
 		position: relative
 		border-bottom: 1px solid #777779
@@ -622,7 +616,6 @@ header
 		-webkit-transition: all 0.2s ease-in-out
 		transition: all 0.2s ease-in-out
 		+md
-			float: none
 			margin-top: -15px
 			order: 3
 			align-self: flex-end
@@ -641,17 +634,15 @@ header
 			top: calc(50% - 14px)
 			left: -38px
 	.search
-		float: left
-		width: 540px
-		margin: 30px 0 0 83px
-		+lg
-			margin: 30px 0 0 20px
+		flex: 0 1 540px
+		margin: 30px 0 0
 		+md
-			float: none
 			margin: 0 0 15px
 			order: 1
-		+sm
+			flex: 0 1 auto
+			max-width: 540px
 			width: 100%
+		+sm
 		.search-input
 			height: 40px
 			border: 2px solid #cbcdce
@@ -708,10 +699,12 @@ header
 		.line
 			display: inline-block
 			width: 100%
-			+sm
+			+md
 				display: flex
-				flex-direction: column
+				justify-content: space-between
+			+sm
 				align-items: center
+				flex-direction: column
 			.col
 				float: left
 				+sm
@@ -722,10 +715,8 @@ header
 						margin-top: 5px
 				&:nth-child(1)
 					margin-right: 87px
-					+sm
+					+md
 						margin-right: 0
-				&:nth-child(3)
-					float: right
 				label
 					display: inline-block
 					font-family: 'Roboto-Regular'
@@ -1217,6 +1208,7 @@ ul.tabs__caption
 			top: 91px
 		+sm
 			display: none
+
 .subscribe-wrap
 	max-width: 600px
 	margin: 0 auto
@@ -1426,8 +1418,7 @@ footer
 			+sm
 				flex-direction: column
 				align-items: center
-				
-				
+			
 			.col
 				+sm
 					text-align: center
@@ -1613,7 +1604,7 @@ footer
 			&:hover
 				background-color: transparent
 				color: #000
-	
+
 .footer__info
 	margin-top: -100px
 	max-width: 610px
@@ -2114,6 +2105,8 @@ footer
 			float: left
 			height: 28px
 			margin-right: 5px
+			+sm
+				margin-bottom: 5px
 			a
 				display: block
 				height: 28px
@@ -2151,18 +2144,34 @@ footer
 		color: #4d4d4f
 		line-height: 52px
 		margin-bottom: 14px
+		span
+			display: inline-block
+			vertical-align: baseline
 		+sm
 			font-size: 25px
-			margin-bottom: 0
+			margin-bottom: 10px
+			line-height: 32px
+			text-align: center
 
 .product-gallery
-	display: inline-block
-	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
 	margin-bottom: 34px
+	+md
+		flex-direction: column
+		margin-bottom: 20px
 	.gallery
-		float: left
-		width: 410px
+		flex: 0 1 410px
 		position: relative
+		+lg
+			flex: 0 1 370px
+		+md
+			width: 100%
+			max-width: 480px
+			margin: 0 auto 15px
+		+sm
+			max-width: none
 
 .slider
 	&.slider-gallery-for
@@ -2171,6 +2180,16 @@ footer
 		border: 1px solid #f0f0f0
 		border-radius: 3px
 		float: right
+		+lg
+			width: 320px
+			margin-bottom: 3px
+		+md
+			float: left
+			margin-left: 60px
+		+sm
+			float: none
+			margin: 0 auto
+			width: 300px
 		&.slick-initialized
 			display: block
 		.slide
@@ -2182,17 +2201,37 @@ footer
 				vertical-align: bottom
 				text-align: center
 			img
-				display: inline-block
-				max-width: 100%
-				max-height: 100%
+				width: 100%
 	&.slider-gallery-nav
 		display: none
 		width: 364px
 		float: right
 		margin-right: -5px
 		margin-top: 9px
+		+md
+			margin-right: 0
+			margin-top: 0
+			float: right
+			width: 82px
+			margin-left: 15px
+			+sm
+				float: none
+				width: auto
+				max-width: 260px
+				margin: 10px auto 0
+			.slick-slide
+				&:not(:first-child)
+					margin-top: 6px
+					+sm
+						margin: 0
 		&.slick-initialized
 			display: block
+		.slick-track
+			+md
+				display: flex
+				flex-direction: column
+			+sm
+				display: block
 		.slide-min
 			display: table
 			width: 80px
@@ -2205,6 +2244,9 @@ footer
 			-o-transition: all 0.2s ease-in-out
 			-webkit-transition: all 0.2s ease-in-out
 			transition: all 0.2s ease-in-out
+			+sm
+				width: 50px
+				height: 50px
 			&:hover
 				border-color: #e0e1e2
 			.image
@@ -2223,11 +2265,20 @@ footer
 		position: absolute
 		top: 0
 		left: 0
+		+sm
+			position: static
+			display: flex
+			justify-content: center
+			margin-bottom: 10px
 		li
 			width: 44px
 			height: 44px
 			overflow: hidden
 			margin-bottom: 10px
+			+sm
+				margin-bottom: 0
+				&:not(:first-child)
+					margin-left: 5px
 			a
 				display: block
 				height: 44px
@@ -2246,12 +2297,10 @@ footer
 				&.color_4
 					background-color: #e0e1e2
 	.product-information
-		float: right
 		border: 1px solid #e0e1e2
-		width: 395px
-		height: 530px
+		flex: 0 1 395px
 		border-radius: 3px
-		padding: 20px 19px
+		padding: 19px
 
 .product-information
 	.head
@@ -2261,14 +2310,23 @@ footer
 		padding-bottom: 18px
 		margin-bottom: 8px
 		border-bottom: 1px dashed #e0e1e2
+		+sm
+			padding-bottom: 10px
 		.price
 			float: left
 			display: inline-block
 			font-family: 'Roboto-Medium'
 			font-size: 28px
 			color: #de4d4f
+			+sm
+				width: 100%
+				text-align: center
+				margin-bottom: 10px
 		.radio-col
 			float: right
+			+sm
+				width: 100%
+				text-align: center
 		.checkbox
 			vertical-align: top
 			margin: 0 3px 0 0
@@ -2330,10 +2388,21 @@ footer
 		display: inline-block
 		width: 100%
 		margin: 9px 0
+		+md
+			display: flex
+			justify-content: space-around
+		+sm
+			flex-wrap: wrap
 		.col
 			float: left
 			text-align: center
 			margin-right: 19px
+			+md
+				float: none
+				margin-right: 0
+			+sm
+				flex: 1 1 50%
+				margin-bottom: 10px
 			&:nth-last-child(1)
 				margin-right: 0
 			.tit
@@ -2422,12 +2491,18 @@ footer
 			-o-transition: all 0.2s ease-in-out
 			-webkit-transition: all 0.2s ease-in-out
 			transition: all 0.2s ease-in-out
+			+sm
+				width: 100%
+				margin-top: 10px
 			&:hover
 				background-color: transparent
 				color: #000
 	ul.total-list
 		float: left
 		padding-top: 1px
+		+sm
+			width: 100%
+			text-align: center
 		li
 			font-family: 'Roboto-Regular'
 			font-size: 17px
@@ -2482,9 +2557,13 @@ footer
 	ul
 		&.tabs__caption
 			text-align: left
+			+sm
+				text-align: center
 			li
 				margin: 0 6px 0 0
 				padding: 0 28px
+				+sm
+					margin: 0 5px 15px
 		&.list-description
 			margin-bottom: 3px
 			li
@@ -2501,12 +2580,17 @@ footer
 					text-transform: uppercase
 					text-align: right
 					letter-spacing: 0.8px
+					+sm
+						width: 100px
+						text-align: left
 				.val
 					float: right
 					width: calc(100% - 180px)
 					font-family: 'Roboto-Light'
 					font-size: 16px
 					color: #4d4d4f
+					+sm
+						width: calc(100% - 110px)
 					a
 						font-family: 'Roboto-Light'
 						font-size: 16px
@@ -2522,6 +2606,8 @@ footer
 							border-bottom-color: transparent
 	.description-wrap
 		padding: 27px 0 3px 0
+		+sm
+			padding: 10px 0 5px 0
 		span.info
 			font-family: 'Roboto-Light'
 			font-size: 16px
@@ -2530,20 +2616,26 @@ footer
 			letter-spacing: -0.056px
 
 .section-set
-	display: inline-block
-	width: 100%
 	padding: 35px 0
 	border-top: 1px dashed #e0e1e2
 	border-bottom: 1px dashed #e0e1e2
 	.set-col
 		float: left
-		width: 540px
+		width: percentage(540 / 1110)
 		min-height: 387px
 		border-radius: 3px
 		border: 1px solid #e0e1e2
 		background-color: #f7f7f7
+		+md
+			float: none
+			margin: 0 auto
+			width: auto
+			max-width: 540px
 		&:nth-of-type(2n)
 			float: right
+			+md
+				float: none
+				margin-top: 20px
 		.tit
 			text-align: center
 			font-family: 'Roboto-Medium'
@@ -2558,14 +2650,27 @@ footer
 				float: left
 				width: 50%
 				min-height: 300px
+				+sm
+					float: none
+					max-width: 270px
+					min-width: 270px
+					margin: 0 auto
 				&:nth-child(1)
 					border-right: 1px dashed #e0e1e2
+					+sm
+						border-right: 0
 				&:nth-of-type(2n)
 					float: right
+					+sm
+						float: none
 	.set-wrap .item
 		display: inline-block
 		width: 100%
 		padding: 5px 23px 15px 23px
+		+lg
+			padding: 5px 15px 15px 15px
+		+md
+			padding: 5px 23px 15px 23px
 		.text
 			width: 161px
 			float: right
@@ -2612,23 +2717,23 @@ footer
 			height: 22px
 			background: url(../images/prev.png) no-repeat
 			border-radius: 0
-			-webkit-transform: translate(0, 0)
-			-ms-transform: translate(0, 0)
-			transform: translate(0, 0)
+			transform: translate3d(0, 0, 0)
 			position: absolute
 			top: calc(50% - 43px)
 			left: -12px
+			+sm
+				left: -7px
 		.slick-next
 			width: 22px
 			height: 22px
 			background: url(../images/next.png) no-repeat
 			border-radius: 0
-			-webkit-transform: translate(0, 0)
-			-ms-transform: translate(0, 0)
-			transform: translate(0, 0)
+			transform: translate3d(0, 0, 0)
 			position: absolute
 			top: calc(50% - 43px)
 			right: -10px
+			+sm
+				right: -7px
 	&.slider-gallery-product-for
 		display: none
 		&.slick-initialized
@@ -2651,11 +2756,12 @@ footer
 				max-height: 100%
 	&.slider-gallery-product-nav
 		display: none
-		&.slick-initialized
-			display: block
 		width: 42px
 		float: left
 		margin-top: 0
+		&.slick-initialized
+			display: block
+		
 		.slide-min
 			display: table
 			width: 40px
@@ -2697,31 +2803,35 @@ footer
 
 .section-watched
 	padding: 17px 0
+// here
+
+.watched-wrap
+	margin: 0 -15px
+	+lg
+		margin: 0 -6px
+	+md
+		margin: 0 -15px
+		text-align: center
+	.item
+		width: calc(25% - 30px)
+		+lg
+			width: calc(25% - 12px)
+			padding: 19px 14px 15px 14px !important
+			margin: 0 6px!important
+		+md
+			width: 260px
+			margin: 0 15px 15px!important
 
 .watched-wrap, .product-found__items
 	font-size: 0
 	.item
 		display: inline-block
 		vertical-align: top
-		width: calc(33.33333% - 30px)
-		max-width: 260px
-		min-width: 260px
 		min-height: 339px
 		border-radius: 3px
 		border: 1px solid #e0e1e2
 		padding: 19px 22px 15px 18px
 		margin: 0 15px 30px
-		+lg
-			width: calc(33.33333% - 10px)
-			margin: 0 5px 10px
-		+md
-			width: calc(50% - 16px)
-			margin: 0 8px 16px
-			min-height: 410px
-		+sm
-			//width: calc(33.33333% - 8px)
-			//padding: 15px
-			//margin: 0 4px 10px
 		.text
 			width: 161px
 			float: right
@@ -2767,6 +2877,7 @@ footer
 					padding-top: 4px
 					+md
 						display: block
+						width: 100%
 					&-text
 						margin-bottom: 4px
 						&:last-child
@@ -2788,6 +2899,9 @@ footer
 	color: #000000
 	text-transform: uppercase
 	line-height: 62px
+	+sm
+		line-height: 32px
+		margin-bottom: 15px
 
 .section-subscribe.bg-none
 	background: transparent
@@ -2840,7 +2954,7 @@ footer
 				position: absolute
 				top: 4px
 				left: -16px
-				
+
 // new styles =============>
 .title-md
 	color: #000
@@ -2895,7 +3009,7 @@ footer
 			fill: #de4d4f
 		&-icon
 			fill: #cbcdce
-			
+	
 	&__row
 		font-size: 0
 		+md
@@ -3059,7 +3173,7 @@ footer
 		height: 30px
 	select
 		display: none
-	
+
 .checkbox-default
 	label
 		position: relative
@@ -3088,7 +3202,7 @@ footer
 		display: none
 		&:checked + label::after
 			display: block
-			
+
 .product-found
 	&__title
 		font-family: 'Roboto-Medium'
@@ -3103,14 +3217,24 @@ footer
 			margin: 20px -8px 0
 		+md
 			margin: 20px -4px 0
-		+sm
 			text-align: center
 		.item
 			position: relative
 			overflow: hidden
-			transform: translate3d(0,0,0)
+			width: calc(33.33333% - 30px)
+			transform: translate3d(0, 0, 0)
 			z-index: 2
 			background: #fff
+			+lg
+				width: calc(33.33333% - 10px)
+				margin: 0 5px 10px
+				max-width: 260px
+			+md
+				min-height: 415px
+				min-width: 260px
+			+sm
+				width: calc(50% - 16px)
+				margin: 0 8px 16px
 			&::after
 				opacity: 0
 				content: ''
@@ -3171,7 +3295,7 @@ footer
 	&__more
 		margin-bottom: 30px
 		text-align: center
-		
+
 .btn-more
 	padding: 0 60px 0 30px
 	height: 45px
@@ -3186,7 +3310,7 @@ footer
 	cursor: pointer
 	background-image: url(../images/more-icon.png)
 	transition: background-color .3s, color .3s
-	
+
 .pagination
 	padding: 30px 0 0
 	border-top: 1px dashed #e0e1e2
@@ -3288,7 +3412,7 @@ footer
 				margin-top: 10px
 		&-field
 			flex-basis: 255px
-			
+		
 		&-message
 			margin-top: 10px
 			flex-basis: 100%
@@ -3334,6 +3458,7 @@ footer
 				font-family: 'Roboto-Bold'
 				font-size: inherit
 				vertical-align: middle
+
 .cart-table
 	padding-bottom: 25px
 	&__row
@@ -3494,6 +3619,7 @@ footer
 					text-decoration: underline
 				&:not(:last-child)
 					margin-bottom: 5px
+
 .steps
 	padding: 35px 0 50px
 	&__in
@@ -3538,7 +3664,7 @@ footer
 			font-family: 'Roboto-Bold'
 			&_highlight
 				color: #000
-	
+
 .switch
 	vertical-align: top
 	margin: 0 3px 0 0
@@ -3592,7 +3718,7 @@ footer
 	&:checked + label:after
 		background: #76c765
 		left: 35px
-		
+
 .switch-option
 	position: relative
 	width: 30px
@@ -3624,7 +3750,7 @@ footer
 		display: none
 		&:checked + label::after
 			display: block
-			
+
 // icons
 .sprite
 	background-image: url(../images/spritesheet.png)
@@ -3695,7 +3821,7 @@ footer
 	width: 25px
 	height: 24px
 	background-position: -142px -106px
-	
+
 .btn-red
 	height: 41px
 	padding: 0 30px
@@ -3716,7 +3842,7 @@ footer
 	&:hover
 		background-color: transparent
 		color: #000
-		
+
 .btn-white
 	@extend .btn-red
 	padding: 0 31px
@@ -3725,7 +3851,7 @@ footer
 	&:hover
 		background-color: #de4d4f
 		color: #fff
-		
+
 .input-default
 	input
 		width: 100%
@@ -3735,11 +3861,11 @@ footer
 		border-radius: 3px
 		border: 2px solid #cbcdce
 		font-size: 14px
-		
+
 .decor-default
 	height: 100px
 	background: url("../images/search-bg.jpg")
-	
+
 .mockup-popup
 	display: none
 	position: fixed
@@ -3748,7 +3874,7 @@ footer
 	right: 0
 	bottom: 0
 	overflow: auto
-	background: rgba(0,0,0,.6)
+	background: rgba(0, 0, 0, .6)
 	z-index: 100
 	text-align: center
 	font-size: 0
@@ -3821,7 +3947,7 @@ footer
 				width: 19px
 				height: 25px
 				background: url("../images/icon-list.png") no-repeat 50% 50%
-				
+
 // selectric plugin
 .selectric-wrapper
 	position: relative
@@ -3866,11 +3992,11 @@ footer
 			height: 35px
 			background: #e0e1e2
 
-@media \0screen\,screen\9
-	.selectric .button
-		color: #DDD
-		text-align: center
-		font: 20px/30px Lucida Sans Unicode, Arial Unicode MS, Arial
+//@media \0screen\,screen
+//	.selectric .button
+//		color: #DDD
+//		text-align: center
+//		font: 20px/30px Lucida Sans Unicode, Arial Unicode MS, Arial
 
 .selectric-focus .selectric
 	border-color: #AAA
@@ -3900,7 +4026,7 @@ footer
 		transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 
 .selectric-disabled
-	filter: alpha(opacity = 50)
+	filter: alpha(opacity=50)
 	opacity: 0.5
 	cursor: default
 	-webkit-user-select: none
@@ -4063,7 +4189,7 @@ footer
 			background: #dedede
 			color: #1f1f1f
 	.disabled
-		filter: alpha(opacity = 50)
+		filter: alpha(opacity=50)
 		opacity: 0.5
 		cursor: default !important
 		background: none !important
@@ -4084,7 +4210,7 @@ footer
 			background: none
 			color: #1f1f1f
 		&.disabled li
-			filter: alpha(opacity = 100)
+			filter: alpha(opacity=100)
 			opacity: 1
 		li
 			padding-left: 25px

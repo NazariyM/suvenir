@@ -20,7 +20,7 @@ $(function () {
       var $this = $(this);
       $this.toggleClass('is-active');
       BODY.toggleClass('is-locked');
-      $nav.fadeToggle().css('display', 'flex');
+      $nav.fadeToggle(100).css('display', 'flex');
     });
 
     WINDOW.on('resize', function () {

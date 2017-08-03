@@ -130,28 +130,154 @@ textarea.error, select.error
 	display: table
 	width: 100%
 
+// mixins
+=justify
+	text-align: justify
+	line-height: 0
+	font-size: 0
+	text-justify: newspaper
+	zoom: 1
+	text-align-last: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0px
+		visibility: hidden
+		overflow: hidden
+=vertical
+	text-align: center
+	font-size: 0
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100%
+		
+=r($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+		
+=lg
+	+r(1200)
+		@content
+=md
+	+r(1023)
+		@content
+=sm
+	+r(767)
+		@content
+
 body
+	min-width: 320px
 	font-family: 'Roboto-Light'
 	font-size: 16px
 	color: #4d4d4f
 	background-color: #ffffff
-	min-width: 1200px
 	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
 		overflow: hidden
 
 .container
-	width: 1110px
+	max-width: 1140px
 	margin: 0 auto
+	padding: 0 15px
+	+sm
+		padding: 0 10px
 
+// hamburger
+.hamburger
+	display: none
+	position: absolute
+	top: 16px
+	right: 10px
+	margin: 0
+	padding: 0
+	width: 40px
+	height: 32px
+	font-size: 0
+	appearance: none
+	box-shadow: none
+	border-radius: none
+	border: none
+	cursor: pointer
+	z-index: 300
+	transition: background 0.3s
+	backface-visibility: hidden
+	-webkit-tap-highlight-color: transparent
+	span
+		display: block
+		position: absolute
+		top: 13px
+		left: 2px
+		right: 2px
+		height: 4px
+		background: #de4d4f
+		transition: background 0s 0.3s
+		&::after, &::before
+			position: absolute
+			display: block
+			left: 0
+			width: 100%
+			height: 4px
+			background-color: #de4d4f
+			content: ""
+		&::before
+			top: -10px
+			transition: top 0.3s ease 0.3s, transform 0.3s ease 0s
+		&::after
+			bottom: -10px
+			transition: bottom 0.3s ease 0.3s, transform 0.3s ease 0s
+	&.is-active
+		span
+			background: none
+			&::before
+				top: 0
+				transform: rotate(45deg)
+				transition: top 0.3s ease 0s, transform 0.3s ease 0.3s
+			&::after
+				bottom: 0
+				transform: rotate(-45deg)
+				transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s
+	+r(767)
+		display: block
+	
 header
 	nav
 		height: 50px
 		background-color: #f7f7f7
+		+sm
+			height: 60px
 		ul.list-nav
 			padding-top: 16px
+			+md
+				display: flex
+				justify-content: space-around
+				&::after
+					display: none
+			+r(767)
+				display: none
+				position: fixed
+				top: 60px
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 100
+				padding: 0
+				flex-direction: column
+				justify-content: center
+				background: #f7f7f7
 			li
 				float: left
 				margin-right: 36px
+				+md
+					float: none
+					margin-right: 0
 				&:nth-last-child(1)
 					margin-right: 0
 				a
@@ -166,23 +292,56 @@ header
 					-o-transition: all 0.2s ease-in-out
 					-webkit-transition: all 0.2s ease-in-out
 					transition: all 0.2s ease-in-out
+					+sm
+						display: block
+						font-size: 22px
+						border-bottom: 0
+						padding: 15px
+						text-align: center
+						color: #de4d4f
 					&:hover
 						border-bottom-color: transparent
 	.header-bottom
-		height: 95px
 		background-color: #ffffff
 
 .header-bottom
+	padding: 17px 0
+	+md
+		padding: 10px 0
+	+sm
+		position: relative
+		padding: 15px 0
+	.container
+		+justify
+		+sm
+			text-align: center
 	.logo
-		float: left
 		display: inline-block
-		margin: 23px 168px 0 0
+		vertical-align: middle
+		+md
+			width: 190px
+		+sm
+			position: absolute
+			top: -45px
+			left: 10px
+			z-index: 101
 		a
 			display: block
+		img
+			display: block
+			width: 100%
+			+md
+				transform: translate3d(0,0,0)
 	.tel-block
-		float: left
+		display: inline-block
+		vertical-align: middle
 		text-align: center
+		-ms-text-align-last: center
+		text-align-last: center
 		padding-top: 21px
+		+sm
+			padding: 15px 0 10px
+			width: 100%
 		a.tel
 			font-family: 'Roboto-Medium'
 			font-size: 30px
@@ -191,6 +350,8 @@ header
 			position: relative
 			letter-spacing: -0.5px
 			margin-left: 26px
+			+md
+				font-size: 23px
 			&:before
 				content: ''
 				width: 16px
@@ -206,8 +367,8 @@ header
 			display: block
 			line-height: 30px
 	ul.list-control
-		float: right
-		padding-top: 23px
+		display: inline-block
+		vertical-align: middle
 		li
 			float: left
 			width: 93px
@@ -215,6 +376,9 @@ header
 			border-left: 1px solid #e6e7e8
 			&.user
 				width: 59px
+				+sm
+					width: 83px
+					border-right: 1px solid #e6e7e8
 			&.basket
 				width: 98px
 			a
@@ -238,6 +402,8 @@ header
 				border-radius: 50%
 				background-color: #de4d4f
 				text-align: center
+				-ms-text-align-last: center
+				text-align-last: center
 				font-family: 'Roboto-Bold'
 				font-size: 10px
 				color: #ffffff
@@ -254,25 +420,44 @@ header
 				font-family: 'Roboto-Bold'
 				font-size: 10px
 				color: #221f20
+				-ms-text-align-last: center
+				text-align-last: center
 				line-height: 21px
 				position: absolute
 				top: 3px
 				right: 26px
 
-.slider.slider-main
-	height: 370px
-	.slide
-		height: 370px
+.screen
+	background: url("../images/m-slider_bg.jpg") no-repeat 50% 50%/cover
+	+sm
+		padding: 0 0 20px
+	&__img
+		float: right
+		width: percentage(600 / 1070)
+		padding-top: 34.6%
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: top center
+		+sm
+			float: none
+			margin: 0 auto
+			width: 100%
+			padding-top: 63%
+			
+.slider.slider-main
+	padding: 0 20px
+	+md
+		padding: 0 15px
+	+sm
+		padding: 0 20px
+	.slide
 		overflow: hidden
 		position: relative
-		img
-			width: 100%
-			min-height: 100%
-			&.bg
-				display: none
+		+md
+			padding: 40px 0 0
+		+sm
+			text-align: center
+			padding: 20px 0 0
 	.slick-prev
 		width: 19px
 		height: 29px
@@ -283,7 +468,9 @@ header
 		transform: translate(0, 0)
 		position: absolute
 		top: calc(50% + 6px)
-		left: calc(50% - 554px)
+		left: 0
+		+md
+			left: -9px
 	.slick-next
 		width: 19px
 		height: 29px
@@ -294,19 +481,33 @@ header
 		transform: translate(0, 0)
 		position: absolute
 		top: calc(50% + 6px)
-		right: calc(50% - 554px)
+		right: 0
+		+md
+			right: -9px
 	.slide .text
-		width: 500px
+		max-width: 500px
 		position: absolute
-		top: 0
-		left: calc(50% - 461px)
-		padding-top: 64px
+		top: 50%
+		transform: translateY(-50%)
+		left: 74px
+		+lg
+			left: 20px
+		+md
+			left: 10px
+			max-width: 400px
+		+sm
+			position: static
+			transform: none
+			margin: 0 auto
 		h2
 			font-family: 'BebasNeueRegular'
 			font-size: 45px
 			color: #000000
 			text-transform: uppercase
 			margin-bottom: 13px
+			+md
+				margin-bottom: 0
+				font-size: 40px
 			span
 				color: #de4d4f
 		p
@@ -314,6 +515,8 @@ header
 			font-size: 16px
 			color: #4d4d4f
 			line-height: 28px
+			+md
+				font-size: 15px
 		a.more-btn
 			display: block
 			width: 172px
@@ -331,6 +534,11 @@ header
 			position: relative
 			margin-left: 1px
 			margin-top: 21px
+			text-align: left
+			+md
+				margin-top: 5px
+			+sm
+				margin: 15px auto 0
 			&:after
 				content: ''
 				width: 14px
@@ -350,8 +558,15 @@ header
 				transform: translate3d(10px, 0px, 0px)
 
 .section-search
-	height: 145px
+	padding: 14px 0
 	background: url(../images/search-bg.jpg) top center
+	+md
+		padding: 20px 0
+	.container
+		+md
+			display: flex
+			flex-direction: column
+			align-items: center
 	.catalog-btn
 		float: left
 		display: inline-block
@@ -370,6 +585,14 @@ header
 		-o-transition: all 0.2s ease-in-out
 		-webkit-transition: all 0.2s ease-in-out
 		transition: all 0.2s ease-in-out
+		+md
+			float: none
+			margin-top: 0
+			order: 2
+			align-self: flex-start
+		+sm
+			align-self: center
+			order: 3
 		&:hover
 			border-bottom-color: transparent
 		&:before
@@ -398,6 +621,15 @@ header
 		-o-transition: all 0.2s ease-in-out
 		-webkit-transition: all 0.2s ease-in-out
 		transition: all 0.2s ease-in-out
+		+md
+			float: none
+			margin-top: -15px
+			order: 3
+			align-self: flex-end
+		+sm
+			align-self: center
+			margin: 0 0 20px 32px
+			order: 2
 		&:hover
 			border-bottom-color: transparent
 		&:before
@@ -412,6 +644,14 @@ header
 		float: left
 		width: 540px
 		margin: 30px 0 0 83px
+		+lg
+			margin: 30px 0 0 20px
+		+md
+			float: none
+			margin: 0 0 15px
+			order: 1
+		+sm
+			width: 100%
 		.search-input
 			height: 40px
 			border: 2px solid #cbcdce
@@ -428,6 +668,9 @@ header
 				color: #4d4d4f
 				border: none
 				outline: none
+				+sm
+					width: calc(100% - 80px)
+					padding: 0 10px
 				&::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
 					color: #4d4d4f
 			button.sub
@@ -450,6 +693,8 @@ header
 				-o-transition: all 0.2s ease-in-out
 				-webkit-transition: all 0.2s ease-in-out
 				transition: all 0.2s ease-in-out
+				+md
+					margin: 14px 28px 0 0
 				&:hover
 					border-bottom-color: #000
 				&:after
@@ -463,10 +708,22 @@ header
 		.line
 			display: inline-block
 			width: 100%
+			+sm
+				display: flex
+				flex-direction: column
+				align-items: center
 			.col
 				float: left
+				+sm
+					min-width: 150px
+					display: flex
+					justify-content: space-between
+					&:not(:first-child)
+						margin-top: 5px
 				&:nth-child(1)
 					margin-right: 87px
+					+sm
+						margin-right: 0
 				&:nth-child(3)
 					float: right
 				label
@@ -711,6 +968,9 @@ ul.tabs__caption
 
 .slider.slider-useful-info
 	margin: 0 -14px
+	+r(1250)
+		max-width: 720px
+		margin: 0 auto
 	.slick-prev
 		width: 19px
 		height: 29px
@@ -2600,6 +2860,8 @@ footer
 	background-position: 164px 12px
 	cursor: pointer
 	background-image: url(../images/more-icon.png)
+	&:hover
+		background: #000
 	
 .pagination
 	padding: 30px 0 0

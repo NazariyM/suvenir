@@ -1,10 +1,40 @@
 $(function () {
 
+  // (function () {
+  //   var menuBtn = $('.js-nav-toggle');
+  //
+  //   menuBtn.on('click', function (ev) {
+  //     ev.preventDefault();
+  //     $(this).toggleClass('is-active');
+  //
+  //   })
+  // })();
+
+  (function () {
+    var $nav = $('.js-nav');
+    var $navBtn = $('.js-nav-toggle');
+    var BODY = $('body');
+    var WINDOW = $(window);
+
+    $navBtn.on('click', function (e) {
+      var $this = $(this);
+      $this.toggleClass('is-active');
+      BODY.toggleClass('is-locked');
+      $nav.fadeToggle().css('display', 'flex');
+    });
+
+    WINDOW.on('resize', function () {
+      $navBtn.removeClass('is-active');
+      BODY.removeClass('is-locked');
+      $nav.removeAttr('style');
+    });
+  })();
+
   (function () {
     var $hoverItem = $('.product-found__items').find('.item');
 
     $hoverItem.on('mouseover', function () {
-      $(this).siblings('.item').css('z-index','-2');
+      $(this).siblings('.item').css('z-index', '-2');
     });
     $hoverItem.on('mouseleave', function () {
       $(this).siblings('.item').removeAttr('style');
@@ -65,19 +95,18 @@ $(function () {
     dots: false,
     infinite: true,
     speed: 500,
-    fade: true,
-    cssEase: 'linear'
+    fade: true
   });
 
-  $('.slider.slider-main .slide').each(function () {
-    var section = $(this).find('.bg').attr('src');
-    if (section == true) {
-      $(this).css({'background-color': '#fff'});
-    }
-    else {
-      $(this).css({'background-image': 'url(' + section + ')'});
-    }
-  });
+  // $('.slider.slider-main .slide').each(function () {
+  //   var section = $(this).find('.bg').attr('src');
+  //   if (section == true) {
+  //     $(this).css({'background-color': '#fff'});
+  //   }
+  //   else {
+  //     $(this).css({'background-image': 'url(' + section + ')'});
+  //   }
+  // });
 
   (function ($) {
     $(function () {
@@ -95,7 +124,13 @@ $(function () {
     dots: false,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 1250,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
   });
 
 
@@ -117,7 +152,6 @@ $(function () {
 
     event.preventDefault();
   });
-
 
   $('.slider-gallery-for').slick({
     dots: false,
@@ -428,5 +462,5 @@ $(function () {
       return false;
     });
   });
-})
+});
 

@@ -307,7 +307,7 @@ header
 .header-bottom
 	padding: 17px 0
 	+md
-		padding: 10px 0
+		padding: 14px 0
 	+sm
 		position: relative
 		padding: 15px 0
@@ -558,7 +558,7 @@ header
 				transform: translate3d(10px, 0px, 0px)
 
 .section-search
-	padding: 14px 0
+	padding: 0 0 27px
 	background: url(../images/search-bg.jpg) top center
 	+md
 		padding: 20px 0
@@ -749,7 +749,9 @@ header
 					color: #4d4d4f
 
 .section-product
-	padding: 67px 0 16px 0
+	padding: 67px 0 3px 0
+	+md
+		padding: 35px 0 15px 0
 	h2
 		font-family: 'Roboto-Regular'
 		font-size: 35px
@@ -758,6 +760,14 @@ header
 		text-align: center
 		letter-spacing: 0.35px
 		margin-bottom: 24px
+		+lg
+			font-size: 33px
+		+md
+			margin: 0 -10px 20px
+			font-size: 25px
+		+sm
+			letter-spacing: 0
+			margin: 0 0 20px
 
 .tabs__content
 	display: none
@@ -787,6 +797,8 @@ ul.tabs__caption
 		display: inline-block
 		margin: 0 6px
 		position: relative
+		+sm
+			margin: 0 0 15px
 		&.active
 			color: #fff
 			background-color: #de4d4f
@@ -816,16 +828,27 @@ ul.tabs__caption
 	-ms-flex-wrap: wrap
 	flex-wrap: wrap
 	padding: 27px 0
+	+md
+		justify-content: center
+		padding: 20px 0 5px
+	+sm
+		padding: 10px 0 5px
 	.item
 		display: inline-block
-		width: calc((100% - 0px) / 6)
+		width: calc(100% / 6)
 		text-align: center
-		padding-bottom: 20px
+		padding-bottom: 16px
+		+md
+			width: calc(100% / 4)
+		+sm
+			width: calc(100% / 2)
 		.icon
 			display: table
 			width: 100%
 			height: 127px
 			text-align: center
+			+md
+				height: 110px
 			a
 				display: table-cell
 				vertical-align: middle
@@ -847,6 +870,8 @@ ul.tabs__caption
 				-o-transition: all 0.2s ease-in-out
 				-webkit-transition: all 0.2s ease-in-out
 				transition: all 0.2s ease-in-out
+				+sm
+					font-size: 14px
 				&:hover
 					border-bottom-color: transparent
 
@@ -855,14 +880,27 @@ ul.tabs__caption
 	position: relative
 	background: url(../images/write-bg.png) top center
 	overflow: hidden
+	+sm
+		height: auto
 	&:before
 		content: ''
 		width: 443px
 		height: 367px
-		background: url(../images/write-after.png) no-repeat
+		background: url(../images/write-after.png) no-repeat 50% 50%/cover
 		position: absolute
-		top: 54px
-		right: calc(50% - 801px)
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		+lg
+			width: 350px
+			height: 300px
+		+md
+			width: 270px
+			height: 230px
+			right: -10px
+			transform: none
+		+sm
+			display: none
 
 .write-form-wrap
 	width: 540px
@@ -871,6 +909,9 @@ ul.tabs__caption
 	padding-top: 56px
 	position: relative
 	z-index: 1
+	+sm
+		width: 100%
+		padding: 35px 0 5px
 	h3
 		font-family: 'Roboto-Medium'
 		font-size: 35px
@@ -881,6 +922,8 @@ ul.tabs__caption
 			font-family: 'Roboto-Light'
 			font-size: 20px
 			text-transform: none
+			+sm
+				font-size: 16px
 	form
 		.line
 			display: inline-block
@@ -889,8 +932,16 @@ ul.tabs__caption
 			.col
 				float: left
 				width: calc(50% - 11px)
+				+sm
+					float: none
+					width: 100%
+					margin: 0 auto
 				&:nth-of-type(2n)
 					float: right
+					+sm
+						width: 100%
+						float: none
+						margin: 10px auto 0
 		input
 			width: 100%
 			height: 40px
@@ -954,6 +1005,8 @@ ul.tabs__caption
 
 .section-useful-info
 	padding: 51px 0 17px 0
+	+sm
+		padding: 30px 0 15px 0
 	h3
 		text-align: center
 		font-family: 'Roboto-Light'
@@ -963,14 +1016,20 @@ ul.tabs__caption
 		text-transform: uppercase
 		letter-spacing: 0.2px
 		margin-bottom: 32px
+		+sm
+			font-size: 28px
 		span
 			font-family: 'Roboto-Medium'
 
 .slider.slider-useful-info
 	margin: 0 -14px
 	+r(1250)
-		max-width: 720px
+		max-width: 940px
 		margin: 0 auto
+	+md
+		max-width: 680px
+	+sm
+		padding: 0 15px 10px
 	.slick-prev
 		width: 19px
 		height: 29px
@@ -982,6 +1041,10 @@ ul.tabs__caption
 		position: absolute
 		top: calc(50% - 28px)
 		left: -35px
+		+lg
+			left: -25px
+		+sm
+			left: -5px
 	.slick-next
 		width: 19px
 		height: 29px
@@ -993,20 +1056,35 @@ ul.tabs__caption
 		position: absolute
 		top: calc(50% - 28px)
 		right: -35px
+		+lg
+			right: -25px
+		+md
+			right: -5px
 	.item
 		width: 350px
 		margin: 0 auto
 		padding-bottom: 25px
+		+lg
+			width: 300px
+		+md
+			width: 320px
+		+sm
+			width: auto
+			padding: 0 5px
 		.image
 			height: 220px
 			border-radius: 3px
 			overflow: hidden
+			+sm
+				height: auto
 			a
 				display: block
 				height: 220px
 				cursor: pointer
 				text-decoration: none
 				position: relative
+				+sm
+					height: auto
 			img
 				width: 100%
 				min-height: 100%
@@ -1075,12 +1153,17 @@ ul.tabs__caption
 	text-align: center
 	border-top: 1px dashed #e3e6de
 	margin-top: 3px
-	padding-top: 50px
-	padding-bottom: 50px
+	padding: 50px 0
+	+md
+		padding: 30px 0 0
 	.item
 		display: inline-block
 		width: 270px
 		margin: 0 21px
+		+md
+			margin: 0 20px 20px
+		+sm
+			margin: 0 20px 25px
 		.icon
 			display: inline-block
 		.txt
@@ -1103,22 +1186,39 @@ ul.tabs__caption
 				line-height: 18px
 
 .section-subscribe
-	height: 298px
-	margin-top: 0
-	padding-top: 82px
+	padding: 80px 0 58px
 	position: relative
 	background: url(../images/subscribe-bg.png) top center
+	+r(1599)
+		padding: 50px 0
+	+sm
+		padding: 30px 0 10px
 	&:before
 		content: ''
 		width: 436px
 		height: 395px
-		background: url(../images/subscribe-before.png) no-repeat
+		background: url(../images/subscribe-before.png) no-repeat 50% 50%/cover
 		position: absolute
 		top: -72px
-		left: calc(50% - 728px)
-
+		left: calc(0% + 74px)
+		+r(1599)
+			left: -10px
+			width: 375px
+			height: 345px
+			top: -55px
+		+r(1365)
+			left: 0
+			width: 280px
+			height: 255px
+			top: -5px
+		+md
+			width: 222px
+			height: 200px
+			top: 91px
+		+sm
+			display: none
 .subscribe-wrap
-	width: 600px
+	max-width: 600px
 	margin: 0 auto
 	text-align: center
 	position: relative
@@ -1129,13 +1229,21 @@ ul.tabs__caption
 		color: #000000
 		text-transform: uppercase
 		margin-bottom: 10px
+		+sm
+			font-size: 28px
 	span.info
 		font-family: 'Roboto-Light'
 		font-size: 20px
 		color: #000000
+		+sm
+			font-size: 18px
 	form
 		display: inline-block
 		margin: 27px 0
+		+sm
+			display: flex
+			flex-direction: column
+			align-items: center
 	input
 		display: inline-block
 		width: 265px
@@ -1154,6 +1262,8 @@ ul.tabs__caption
 		background-image: url(../images/icon-mail2.png)
 		background-repeat: no-repeat
 		background-position: 19px
+		+sm
+			width: 100%
 		&::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
 			color: #4d4d4f
 	form button.sub
@@ -1175,12 +1285,19 @@ ul.tabs__caption
 		-o-transition: all 0.2s ease-in-out
 		-webkit-transition: all 0.2s ease-in-out
 		transition: all 0.2s ease-in-out
+		+sm
+			margin: 10px 0 0
+			width: 100%
 		&:hover
 			background-color: transparent
 			color: #000
 
 .section-seo
 	padding: 66px 0 41px 0
+	+r(1599)
+		padding: 55px 0 20px 0
+	+r(1365)
+		padding: 40px 0 15px 0
 	h3
 		font-family: 'Roboto-Medium'
 		font-size: 35px
@@ -1188,6 +1305,9 @@ ul.tabs__caption
 		letter-spacing: 0.2px
 		text-transform: uppercase
 		margin-bottom: 24px
+		+sm
+			margin-bottom: 10px
+			font-size: 28px
 	p
 		font-family: 'Roboto-Light'
 		font-size: 16px
@@ -1236,28 +1356,103 @@ ul.tabs__caption
 			transform: translate3d(10px, 0px, 0px)
 
 footer
-	padding-top: 44px
-	padding-bottom: 40px
+	padding: 44px 0 40px
 	min-height: 422px
 	background: url(../images/footer-bg.jpg) top center no-repeat
 	background-repeat: repeat-y
 	background-size: cover
+	+md
+		padding: 40px 0 30px
+		min-height: 0
+	+sm
+		padding: 40px 0 60px
+		background-size: 250%
+	.container
+		position: relative
+		display: flex
+		justify-content: space-between
+		+md
+			flex-wrap: wrap
+		+sm
+			align-items: center
+		.dev
+			position: absolute
+			right: 52px
+			bottom: 11px
+			padding-left: 26px
+			font-family: 'Roboto-Light'
+			font-size: 14px
+			color: #4d4d4f
+			line-height: 18px
+			background: url(../images/dev-icon.png) no-repeat
+			+md
+				right: 15px
+				bottom: 21px
+			+sm
+				max-width: 200px
+				bottom: -40px
+				left: calc(50% - 100px)
+				padding: 10px 0 0 26px
+			a
+				font-family: 'Roboto-Light'
+				font-size: 14px
+				color: #4d4d4f
+				line-height: 12px
+				display: inline-block
+				text-decoration: none
+				border-bottom: 1px solid #757577
+				-moz-transition: all 0.2s ease-in-out
+				-o-transition: all 0.2s ease-in-out
+				-webkit-transition: all 0.2s ease-in-out
+				transition: all 0.2s ease-in-out
+				&:hover
+					border-bottom-color: transparent
+			br
+				+sm
+					display: none
 	.footer-left
-		float: left
-		width: 674px
+		width: percentage(635 / 1110)
+		+md
+			order: 1
+			width: 75.5%
+		+sm
+			width: 100%
 		.list-nav
+			display: flex
+			justify-content: space-between
 			margin-bottom: 46px
+			+md
+				margin-bottom: 10px
+			+sm
+				flex-direction: column
+				align-items: center
+				
+				
 			.col
-				float: left
-				margin-right: 20px
+				+sm
+					text-align: center
+					&:not(:first-child)
+						margin-top: 15px
 				&:nth-last-child(1)
 					margin-right: 0
 				&:nth-child(1)
 					width: 204px
+					+lg
+						width: 164px
+					+sm
+						width: auto
 				&:nth-child(2)
 					width: 218px
+					+lg
+						width: 208px
+					+sm
+						width: auto
 				&:nth-child(3)
 					width: 172px
+					+lg
+						width: 172px
+					+sm
+						width: auto
 				.tit
 					font-family: 'Roboto-Black'
 					font-size: 16px
@@ -1265,6 +1460,9 @@ footer
 					text-transform: uppercase
 					letter-spacing: 1px
 					margin-bottom: 18px
+					+md
+						margin-bottom: 10px
+						font-size: 15px
 				ul.list li
 					margin-bottom: 12px
 					a
@@ -1280,34 +1478,18 @@ footer
 						transition: all 0.2s ease-in-out
 						&:hover
 							border-bottom-color: transparent
-		.logo
-			width: 186px
-			margin-bottom: 10px
-			a
-				display: block
-			img
-				max-width: 100%
-		.copyright
-			font-family: 'Roboto-Light'
-			font-size: 13px
-			color: #4d4d4f
-			line-height: 20px
-			a
-				font-family: 'Roboto-Light'
-				font-size: 13px
-				color: #de4d4f
-				text-decoration: none
-				border-bottom: 1px solid #e68283
-				-moz-transition: all 0.2s ease-in-out
-				-o-transition: all 0.2s ease-in-out
-				-webkit-transition: all 0.2s ease-in-out
-				transition: all 0.2s ease-in-out
-				&:hover
-					border-bottom-color: transparent
 	.contact
-		float: left
 		width: 190px
-		margin-left: 26px
+		margin-left: 15px
+		+lg
+			width: 180px
+			margin-left: 5px
+		+md
+			order: 3
+			width: 100%
+			margin: 0
+		+sm
+			margin-top: 10px
 		.tit
 			font-family: 'Roboto-Black'
 			font-size: 16px
@@ -1315,6 +1497,19 @@ footer
 			text-transform: uppercase
 			letter-spacing: 1px
 			margin-bottom: 18px
+			+md
+				margin-bottom: 10px
+				font-size: 15px
+			+sm
+				text-align: center
+		ul.list-contact
+			+md
+				display: flex
+				justify-content: space-between
+			+sm
+				flex-direction: column
+				align-items: center
+				text-align: center
 		ul.list-contact li
 			margin-bottom: 6px
 			list-style: none
@@ -1339,11 +1534,15 @@ footer
 				display: block
 				line-height: 28px
 	.soc-col
-		float: right
 		width: 170px
-		min-height: 324px
-		padding-bottom: 50px
 		position: relative
+		+md
+			order: 2
+			min-height: 0
+			padding: 0
+		+sm
+			width: 100%
+			text-align: center
 		.tit
 			font-family: 'Roboto-Black'
 			font-size: 16px
@@ -1351,11 +1550,19 @@ footer
 			text-transform: uppercase
 			letter-spacing: 1px
 			margin-bottom: 18px
+			+md
+				margin-bottom: 10px
+				font-size: 15px
 		ul.soc-list
 			margin-bottom: 12px
+			+sm
+				font-size: 0
 			li
 				float: left
 				margin-right: 13px
+				+sm
+					display: inline-block
+					float: none
 				&:nth-last-child(1)
 					margin-right: 0
 				a
@@ -1383,6 +1590,7 @@ footer
 		.write-btn
 			display: inline-block
 			width: 100%
+			max-width: 250px
 			height: 41px
 			outline: none
 			cursor: pointer
@@ -1405,51 +1613,42 @@ footer
 			&:hover
 				background-color: transparent
 				color: #000
-		.dev
-			position: absolute
-			left: 0
-			bottom: 4px
-			padding-left: 26px
+	
+.footer__info
+	margin-top: -100px
+	max-width: 610px
+	+lg
+		max-width: 600px
+	+md
+		margin-top: 0
+	.logo
+		width: 186px
+		margin-bottom: 10px
+		+md
+			display: none
+		a
+			display: block
+		img
+			max-width: 100%
+	.copyright
+		font-family: 'Roboto-Light'
+		font-size: 13px
+		color: #4d4d4f
+		line-height: 20px
+		+sm
+			text-align: center
+		a
 			font-family: 'Roboto-Light'
-			font-size: 14px
-			color: #4d4d4f
-			line-height: 18px
-			background: url(../images/dev-icon.png) no-repeat
-			a
-				font-family: 'Roboto-Light'
-				font-size: 14px
-				color: #4d4d4f
-				line-height: 12px
-				display: inline-block
-				text-decoration: none
-				border-bottom: 1px solid #757577
-				-moz-transition: all 0.2s ease-in-out
-				-o-transition: all 0.2s ease-in-out
-				-webkit-transition: all 0.2s ease-in-out
-				transition: all 0.2s ease-in-out
-				&:hover
-					border-bottom-color: transparent
-
-//#page
-//	display: -webkit-flex
-//	display: -moz-flex
-//	display: -ms-flex
-//	display: -o-flex
-//	display: flex
-//	min-height: 100vh
-//	-webkit-flex-direction: column
-//	-moz-flex-direction: column
-//	-ms-flex-direction: column
-//	-o-flex-direction: column
-//	flex-direction: column
-//	overflow-x: hidden
-
-//#content
-//	-webkit-flex: 1
-//	-moz-flex: 1
-//	-ms-flex: 1
-//	-o-flex: 1
-//	flex: 1
+			font-size: 13px
+			color: #de4d4f
+			text-decoration: none
+			border-bottom: 1px solid #e68283
+			-moz-transition: all 0.2s ease-in-out
+			-o-transition: all 0.2s ease-in-out
+			-webkit-transition: all 0.2s ease-in-out
+			transition: all 0.2s ease-in-out
+			&:hover
+				border-bottom-color: transparent
 
 .section-about
 	padding-top: 54px

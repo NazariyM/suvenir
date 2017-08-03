@@ -126,9 +126,14 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [{
-      breakpoint: 1250,
+      breakpoint: 1023,
       settings: {
         slidesToShow: 2
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1
       }
     }]
   });

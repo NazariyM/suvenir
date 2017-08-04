@@ -1,15 +1,5 @@
 $(function () {
 
-  // (function () {
-  //   var menuBtn = $('.js-nav-toggle');
-  //
-  //   menuBtn.on('click', function (ev) {
-  //     ev.preventDefault();
-  //     $(this).toggleClass('is-active');
-  //
-  //   })
-  // })();
-
   (function () {
     var $nav = $('.js-nav');
     var $navBtn = $('.js-nav-toggle');
@@ -97,16 +87,6 @@ $(function () {
     speed: 500,
     fade: true
   });
-
-  // $('.slider.slider-main .slide').each(function () {
-  //   var section = $(this).find('.bg').attr('src');
-  //   if (section == true) {
-  //     $(this).css({'background-color': '#fff'});
-  //   }
-  //   else {
-  //     $(this).css({'background-image': 'url(' + section + ')'});
-  //   }
-  // });
 
   (function ($) {
     $(function () {

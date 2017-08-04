@@ -3555,6 +3555,9 @@ footer
 	+md
 		margin: 0 auto
 		padding: 0
+	&::after
+		+sm
+			display: none
 	//&__in
 	
 	//&__body
@@ -3570,8 +3573,9 @@ footer
 				float: none
 				margin: 0 auto
 			+sm
-				overflow-x: scroll
+				margin: 0
 				width: auto
+				//overflow: scroll
 		&:nth-child(2)
 			float: right
 			width: 255px
@@ -3583,9 +3587,9 @@ footer
 				max-width: 400px
 				margin: 15px auto 0
 	&__body
-		+sm
-			min-width: 750px
-			padding: 0 10px
+		//+sm
+			//min-width: 750px
+			//padding: 0 10px
 	&__head
 		display: flex
 		justify-content: space-around
@@ -3594,6 +3598,8 @@ footer
 		border: 1px dashed #e0e1e2
 		border-left: 0
 		border-right: 0
+		+sm
+			display: none
 	&__title
 		font-size: 12px
 		text-transform: uppercase
@@ -3620,26 +3626,62 @@ footer
 			flex: 0 1 90px
 			+md
 				flex: 0 1 95px
+	&__mob-label
+		display: none
+		height: 28px
+		line-height: 28px
+		margin: 0 0 10px
+		padding: 0 5px
+		font-size: 13px
+		text-transform: uppercase
+		text-align: center
+		border-top: 1px dashed #e0e1e2
+		border-bottom: 1px dashed #e0e1e2
+		background: #a2a2a7
+		color: #fff
+		font-family: "Roboto-Medium"
+		+sm
+			display: block
 	&__item
 		display: flex
 		justify-content: space-between
 		align-items: center
 		padding: 15px 0
 		border-bottom: 1px dashed #e0e1e2
+		+sm
+			padding: 15px 0 0
+			flex-direction: column
+			text-align: center
+			border: 2px dashed #e0e1e2
+			background: #f7f7f7
+			border-radius: 5px
+			&:not(:first-child)
+				margin-top: 15px
 		> div
 			display: inline-block
 			vertical-align: middle
 			margin-right: 40px
 			+lg
 				margin-right: 25px
+			+sm
+				margin-right: 0
+				width: 100%
+				height: 75px
 			&:nth-child(1)
 				margin-right: 10px
+				+sm
+					margin: 0 0 5px
 			&:last-child
 				margin-right: 0
+		&-option
+			.switch-option
+				margin: 0 auto
 		&-pic-wrap
 			position: relative
 			width: 100px
 			height: 100px
+			+sm
+				height: 100px!important
 			&::after
 				content: ''
 				position: absolute
@@ -3656,6 +3698,8 @@ footer
 			border: 1px solid #f0f0f0
 			background-color: #fffdff
 			overflow: hidden
+			+sm
+				margin: 0 auto
 			img
 				width: 100%
 				height: 100%
@@ -3666,12 +3710,23 @@ footer
 			font-size: 16px
 			line-height: 20px
 			color: #000
+			+sm
+				width: 100%
+		&-price
+			+sm
+				height: 65px!important
 		&-name
 			width: 180px
 			font-size: 15px
 			line-height: 22px
+			+sm
+				padding: 2px 0
+				width: 100%
+				height: auto!important
 		&-count
 			width: 50px
+			+sm
+				width: 100%
 			input
 				width: 100%
 				padding: 0 5px
@@ -3681,9 +3736,13 @@ footer
 				background-color: #ffffff
 				font-size: 14px
 				text-align: center
+				+sm
+					width: 100px
 		&-result
 			font-size: 0
 			white-space: nowrap
+			+sm
+				height: 65px!important
 			span
 				display: inline-block
 				vertical-align: middle
@@ -3776,6 +3835,8 @@ footer
 
 .steps
 	padding: 35px 0 50px
+	+sm
+		padding: 35px 0 30px
 	&__in
 		position: relative
 		display: flex

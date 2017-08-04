@@ -3555,6 +3555,9 @@ footer
 	+md
 		margin: 0 auto
 		padding: 0
+	//&__in
+	
+	//&__body
 	&__row
 		clear: both
 	&__col
@@ -3581,7 +3584,8 @@ footer
 				margin: 15px auto 0
 	&__body
 		+sm
-			min-width: 730px
+			min-width: 750px
+			padding: 0 10px
 	&__head
 		display: flex
 		justify-content: space-around
@@ -3752,6 +3756,8 @@ footer
 				font-size: 0
 				cursor: pointer
 				font-family: 'Roboto-Light'
+				+sm
+					margin: 0 5px 5px
 				&:hover span
 					text-decoration: none
 				.sprite
@@ -3765,6 +3771,8 @@ footer
 					text-decoration: underline
 				&:not(:last-child)
 					margin-bottom: 5px
+					+sm
+						margin-bottom: 5px
 
 .steps
 	padding: 35px 0 50px
@@ -4044,21 +4052,28 @@ footer
 		left: 50%
 		top: 50%
 		transform: translate(-50%, -50%)
-		width: 578px
+		max-width: 578px
+		width: 100%
 		border-radius: 3px
 		padding: 40px
 		background: #fff
 		z-index: 101
+		+sm
+			padding: 25px
 	&__title
 		font-size: 30px
 		font-family: 'Roboto-Medium'
 		text-transform: uppercase
 		color: #000000
+		+sm
+			font-size: 27px
 	&__actions
 		display: flex
 		justify-content: space-between
 		align-items: center
 		margin: 25px 0 20px
+		+sm
+			flex-direction: column
 	&__message
 		margin-bottom: 25px
 		textarea
@@ -4091,6 +4106,9 @@ footer
 			font-size: 14px
 			font-family: 'Roboto-Bold'
 			letter-spacing: .06em
+			+sm
+				&:not(:first-child)
+					margin-top: 15px
 			&:hover span
 				text-decoration: none
 			span

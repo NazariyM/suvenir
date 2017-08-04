@@ -3766,7 +3766,8 @@ footer {
         margin: 15px auto 0; } }
   @media only screen and (max-width: 767px) {
     .cart-table__body {
-      min-width: 730px; } }
+      min-width: 750px;
+      padding: 0 10px; } }
   .cart-table__head {
     display: flex;
     justify-content: space-around;
@@ -3948,6 +3949,9 @@ footer {
         font-size: 0;
         cursor: pointer;
         font-family: "Roboto-Light"; }
+        @media only screen and (max-width: 767px) {
+          .cart-table__result-actions-btn {
+            margin: 0 5px 5px; } }
         .cart-table__result-actions-btn:hover span {
           text-decoration: none; }
         .cart-table__result-actions-btn .sprite {
@@ -3961,6 +3965,9 @@ footer {
           text-decoration: underline; }
         .cart-table__result-actions-btn:not(:last-child) {
           margin-bottom: 5px; }
+          @media only screen and (max-width: 767px) {
+            .cart-table__result-actions-btn:not(:last-child) {
+              margin-bottom: 5px; } }
 
 .steps {
   padding: 35px 0 50px; }
@@ -4241,21 +4248,31 @@ footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 578px;
+    max-width: 578px;
+    width: 100%;
     border-radius: 3px;
     padding: 40px;
     background: #fff;
     z-index: 101; }
+    @media only screen and (max-width: 767px) {
+      .mockup-popup__in {
+        padding: 25px; } }
   .mockup-popup__title {
     font-size: 30px;
     font-family: "Roboto-Medium";
     text-transform: uppercase;
     color: #000000; }
+    @media only screen and (max-width: 767px) {
+      .mockup-popup__title {
+        font-size: 27px; } }
   .mockup-popup__actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 25px 0 20px; }
+    @media only screen and (max-width: 767px) {
+      .mockup-popup__actions {
+        flex-direction: column; } }
   .mockup-popup__message {
     margin-bottom: 25px; }
     .mockup-popup__message textarea {
@@ -4287,6 +4304,9 @@ footer {
     font-size: 14px;
     font-family: "Roboto-Bold";
     letter-spacing: 0.06em; }
+    @media only screen and (max-width: 767px) {
+      .mockup-popup__send-link:not(:first-child) {
+        margin-top: 15px; } }
     .mockup-popup__send-link:hover span {
       text-decoration: none; }
     .mockup-popup__send-link span {

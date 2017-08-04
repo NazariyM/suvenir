@@ -165,7 +165,6 @@ textarea.error, select.error
 =sm
 	+r(767)
 		@content
-
 body
 	min-width: 320px
 	font-family: 'Roboto-Light'
@@ -1643,6 +1642,8 @@ footer
 
 .section-about
 	padding-top: 54px
+	+sm
+		padding-top: 30px
 	h1
 		font-family: 'Roboto-Medium'
 		font-size: 35px
@@ -1650,6 +1651,8 @@ footer
 		line-height: 38px
 		text-transform: uppercase
 		text-align: center
+		+sm
+			font-size: 32px
 
 .advantage-list
 	text-align: center
@@ -1661,6 +1664,8 @@ footer
 		background-color: #de4d4f
 		margin: 18px 13px
 		border-radius: 15px
+		+md
+			margin: 18px 10px
 		.icon-wrap
 			display: table
 			width: 100%
@@ -1736,10 +1741,16 @@ footer
 		text-transform: uppercase
 		text-align: center
 		margin-bottom: 23px
+		+sm
+			font-size: 32px
 
 .slider.slider-certificates
-	width: 760px
+	max-width: 760px
 	margin: 0 auto
+	+md
+		max-width: 670px
+	+sm
+		padding: 0 20px
 	.slick-prev
 		width: 19px
 		height: 29px
@@ -1751,6 +1762,8 @@ footer
 		position: absolute
 		top: calc(50% - 12px)
 		left: -35px
+		+sm
+			left: 0
 	.slick-next
 		width: 19px
 		height: 29px
@@ -1762,6 +1775,8 @@ footer
 		position: absolute
 		top: calc(50% - 12px)
 		right: -35px
+		+sm
+			right: 0
 	.image
 		display: table
 		width: 161px
@@ -1777,7 +1792,7 @@ footer
 			max-height: 100%
 
 .team-wrap
-	padding: 34px 0 0 0
+	padding: 35px 0 10px
 	h2
 		font-family: 'Roboto-Medium'
 		font-size: 35px
@@ -1786,19 +1801,19 @@ footer
 		text-transform: uppercase
 		text-align: center
 		margin-bottom: 23px
+		+sm
+			font-size: 32px
 
 .team-list
-	display: inline-block
-	width: 100%
+	font-size: 0
+	margin: 0 -15px
+	text-align: center
+	text-align-last: center
 	.item
-		float: left
 		display: inline-block
 		width: 160px
-		height: 260px
-		margin-right: 30px
+		margin: 0 15px 20px
 		text-align: center
-		&:nth-of-type(6n)
-			margin-right: 0
 		.photo
 			width: 160px
 			height: 160px
@@ -1841,6 +1856,8 @@ footer
 
 .section-contact
 	padding: 32px 0
+	+lg
+		padding: 10px 0
 
 .contact-wrap
 	display: inline-block
@@ -1849,6 +1866,12 @@ footer
 	.callback-form
 		float: right
 		width: 350px
+		+lg
+			width: 100%
+			max-width: 500px
+			margin: 15px auto 0
+			float: none
+			
 		h2
 			font-family: 'Roboto-Medium'
 			font-size: 30px
@@ -1858,6 +1881,8 @@ footer
 			text-align: left
 			margin-bottom: 24px
 			letter-spacing: 0.35px
+			+lg
+				text-align: center
 		form
 			.line
 				display: inline-block
@@ -1919,12 +1944,17 @@ footer
 				-o-transition: all 0.2s ease-in-out
 				-webkit-transition: all 0.2s ease-in-out
 				transition: all 0.2s ease-in-out
+				+lg
+					margin: 0 auto
 				&:hover
 					background-color: transparent
 					color: #000
 	.contacts-col
 		float: left
 		width: 729px
+		+lg
+			width: 100%
+			float: none
 		h1
 			display: block
 			font-family: 'Roboto-Medium'
@@ -1934,20 +1964,28 @@ footer
 			text-transform: uppercase
 			margin-left: -2px
 			margin-bottom: 26px
+			+lg
+				text-align: center
 		ul.tabs__caption
 			display: inline-block
 			width: 100%
 			text-align: left
+			+lg
+				text-align: center
 			li
 				margin: 0 5px 0 0
 				height: 56px
 				padding: 0 28px
 				line-height: 56px
-
+				+sm
+					margin: 0 5px 15px
 .contact-info-wrap
-	display: inline-block
-	width: 100%
 	padding: 32px 0 0 0
+	+lg
+		max-width: 720px
+		margin: 0 auto
+	+sm
+		padding: 0
 	.address
 		font-family: 'Roboto-Light'
 		font-size: 18px
@@ -1982,14 +2020,22 @@ footer
 			letter-spacing: -0.2px
 			display: block
 			margin-bottom: 23px
+			+sm
+				text-align: center
 		.soc-vk
 			float: left
-			width: 350px
+			max-width: 350px
+			+sm
+				float: none
+				margin: 0 auto
 			> img
 				max-width: 100%
 		.soc-f
 			float: right
-			width: 350px
+			max-width: 350px
+			+sm
+				float: none
+				margin: 15px auto 0
 			> img
 				max-width: 100%
 
@@ -2961,6 +3007,8 @@ footer
 	font-family: 'Roboto-Medium'
 	font-size: 35px
 	text-transform: uppercase
+	+sm
+		font-size: 28px
 // category
 .filter
 	position: relative
@@ -3356,6 +3404,8 @@ footer
 // cart
 .cart
 	padding: 50px 0 40px
+	+sm
+		padding: 40px 0
 	&__title
 		text-align: center
 	&__form
@@ -3363,6 +3413,8 @@ footer
 		margin: 0 auto
 		padding: 50px 0 10px
 		font-size: 14px
+		+sm
+			padding: 30px 0 10px
 		&-row
 			display: flex
 			justify-content: space-between
@@ -3370,16 +3422,29 @@ footer
 			flex-wrap: wrap
 			&:nth-child(2)
 				margin: 80px 0 30px
+				+sm
+					margin: 40px 0 0
 		&-col
 			&:nth-child(1)
 				position: relative
-				flex-basis: 186px
+				flex: 0 0 186px
+				+sm
+					flex: 1 1 100%
 			&:nth-child(2)
 				padding-top: 25px
+				+sm
+					display: flex
+					padding-top: 15px
 			&:nth-child(3)
-				flex-basis: 420px
+				flex: 0 1 420px
+				+sm
+					margin-top: 15px
+					flex: 1 1 100%
 			.checkbox-default + .checkbox-default
 				margin-top: 10px
+				+sm
+					margin-top: 0
+					margin-left: 15px
 		&-title
 			margin-bottom: 10px
 			font-family: 'Roboto-Bold'
@@ -3396,6 +3461,8 @@ footer
 				text-transform: none
 				text-align: center
 				margin-bottom: 25px
+				+sm
+					margin-bottom: 10px
 		&-descr
 			sub
 				color: #de4d4f
@@ -3408,16 +3475,26 @@ footer
 				position: absolute
 				bottom: -59px
 				min-width: 250px
+				+sm
+					bottom: -145px
 			& + &
 				margin-top: 10px
 		&-field
-			flex-basis: 255px
-		
+			flex: 0 1 255px
+			+md
+				flex: 0 1 280px
+				margin: 0 auto
+				&:not(:first-child)
+					margin-top: 10px
+			+sm
+				flex: 1 1 100%
 		&-message
 			margin-top: 10px
 			flex-basis: 100%
 			border: 2px solid #cbcdce
 			border-radius: 3px
+			+sm
+				margin: 15px 0
 			textarea
 				display: block
 				width: 100%
@@ -3434,12 +3511,19 @@ footer
 				line-height: 45px
 				height: 45px
 				margin: 0 5px
+				+sm
+					margin: 10px 0 0
+					padding: 0
+					width: 100%
+					font-size: 13px
 		&-text
 			text-align: center
 	&__success
 		margin-top: 50px
 		font-family: 'Roboto-Medium'
 		text-align: center
+		+sm
+			margin-top: 30px
 		&-title
 			margin-bottom: 20px
 			font-size: 25px
@@ -3452,7 +3536,11 @@ footer
 			p
 				font-size: 22px
 				line-height: 30px
+				+sm
+					font-size: 17px
+					line-height: 25px
 			a
+				display: inline-block
 				text-decoration: none
 				color: #000
 				font-family: 'Roboto-Bold'
@@ -3461,51 +3549,87 @@ footer
 
 .cart-table
 	padding-bottom: 25px
+	+lg
+		max-width: 980px
+		margin: 0 auto
+	+md
+		margin: 0 auto
+		padding: 0
 	&__row
 		clear: both
 	&__col
 		&:nth-child(1)
 			float: left
 			width: 825px
+			+lg
+				width: 730px
+			+md
+				float: none
+				margin: 0 auto
+			+sm
+				overflow-x: scroll
+				width: auto
 		&:nth-child(2)
 			float: right
 			width: 255px
+			+lg
+				width: 230px
+			+md
+				float: none
+				width: 100%
+				max-width: 400px
+				margin: 15px auto 0
+	&__body
+		+sm
+			min-width: 730px
 	&__head
+		display: flex
+		justify-content: space-around
 		padding: 13px 0
 		font-size: 0
 		border: 1px dashed #e0e1e2
 		border-left: 0
 		border-right: 0
 	&__title
-		display: inline-block
-		vertical-align: top
 		font-size: 12px
 		text-transform: uppercase
 		text-align: center
 		&:nth-child(1)
-			width: 40%
+			flex: 0 1 330px
 		&:nth-child(2)
-			width: 9%
+			flex: 0 1 85px
+			+md
+				flex: 0 1 120px
 		&:nth-child(3)
-			width: 16%
+			flex: 0 1 115px
+			+md
+				flex: 0 1 75px
 		&:nth-child(4)
-			width: 10%
+			flex: 0 1 92px
+			+md
+				flex: 0 1 115px
 		&:nth-child(5)
-			width: 13%
+			flex: 0 1 113px
+			+md
+				flex: 0 1 62px
 		&:nth-child(6)
-			width: 12%
+			flex: 0 1 90px
+			+md
+				flex: 0 1 95px
 	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
 		padding: 15px 0
 		border-bottom: 1px dashed #e0e1e2
-		font-size: 0
 		> div
 			display: inline-block
 			vertical-align: middle
-			margin-right: 45px
+			margin-right: 40px
+			+lg
+				margin-right: 25px
 			&:nth-child(1)
-				margin-right: 20px
-			&:nth-child(2)
-				margin-right: 40px
+				margin-right: 10px
 			&:last-child
 				margin-right: 0
 		&-pic-wrap
@@ -3554,9 +3678,15 @@ footer
 				font-size: 14px
 				text-align: center
 		&-result
-			display: flex
-			align-items: center
+			font-size: 0
+			white-space: nowrap
+			span
+				display: inline-block
+				vertical-align: middle
+				font-size: 16px
 		&-cancel-btn
+			vertical-align: middle
+			display: inline-block
 			margin-left: 10px
 			background-color: transparent
 			outline: none
@@ -3565,6 +3695,8 @@ footer
 	&__order-id
 		margin-top: 27px
 		font-size: 14px
+		+md
+			margin-top: 15px
 		&-title
 			margin-bottom: 3px
 			color: #000000
@@ -3577,26 +3709,40 @@ footer
 	&__descr
 		padding-top: 35px
 		font-size: 14px
+		+md
+			padding-top: 15px
 		sub
 			font-size: 20px
 	&__result
 		min-height: 248px
-		padding: 22px 4px 20px 4px
+		padding: 15px 4px 20px 4px
 		font-family: 'Roboto-Medium'
 		border-radius: 3px
 		border: 2px solid #de4d4f
+		+md
+			min-height: 0
+			padding: 10px 4px 12px 4px
 		&-price
 			font-size: 28px
 			color: #000
 			margin-bottom: 13px
 			line-height: 33px
 			text-align: center
+			sup
+				vertical-align: super
 		&-submit
 			margin-bottom: 14px
 			width: 100%
+			+md
+				margin: 0 30px 10px
 		&-actions
 			max-width: 204px
 			margin: 0 auto
+			+md
+				display: flex
+				justify-content: space-around
+				flex-wrap: wrap
+				max-width: none
 			&-btn
 				line-height: 28px
 				background-color: transparent
@@ -3629,12 +3775,16 @@ footer
 		align-items: center
 		max-width: 500px
 		margin: 0 auto
+		+sm
+			flex-direction: column
 		&::after, &::before
 			content: ''
 			position: absolute
 			top: 24px
 			width: 112px
 			border-top: 1px dashed #e0e1e2
+			+sm
+				display: none
 		&::after
 			right: 100px
 		&::before
@@ -3642,15 +3792,24 @@ footer
 	&_bordered
 		padding-bottom: 55px
 		border-bottom: 1px dashed #e0e1e2
+		+sm
+			padding-bottom: 30px
 	
 	&__item
 		text-align: center
+		+sm
+			&:not(:first-child)
+				margin-top: 20px
 		&:nth-child(1)
 			position: relative
 			left: 9px
+			+sm
+				left: auto
 		&:nth-child(2)
 			position: relative
 			left: 15px
+			+sm
+				left: auto
 		&-pic
 			margin: 0 auto 15px
 			height: 50px
@@ -3685,7 +3844,6 @@ footer
 			font-size: 14px
 			color: #4d4d4f
 			line-height: 32px
-			margin-right: 14px
 			&:before
 				content: ''
 				position: absolute

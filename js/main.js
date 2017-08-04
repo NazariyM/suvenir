@@ -143,7 +143,18 @@ $(function () {
     dots: false,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 424,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   });
 
   $('.category-filter-list .item .tit').click(function (event) {

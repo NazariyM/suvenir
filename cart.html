@@ -29,7 +29,10 @@
    <header>
       <nav>
          <div class="container">
-            <ul class="list-nav clearfix">
+            <div class="hamburger js-nav-toggle">
+               <span></span>
+            </div>
+            <ul class="list-nav clearfix js-nav">
                <li><a href="#">О компании</a></li>
                <li><a href="#">Как купить</a></li>
                <li><a href="#">Доставка и оплата</a></li>
@@ -40,7 +43,7 @@
          </div>
       </nav>
       <div class="header-bottom">
-         <div class="container clearfix">
+         <div class="container">
             <div class="logo">
                <a href="#">
                   <img src="images/logo.png" alt=""/>
@@ -103,7 +106,7 @@
       <section class="cart">
          <div class="container">
             <h2 class="cart__title title-md">Корзина товаров №001</h2>
-            <div class="steps steps_bordered">
+            <div class="steps">
                <div class="steps__in">
                   <div class="steps__item">
                      <div class="steps__item-pic sprite sprite-cart-act"></div>
@@ -122,107 +125,111 @@
             <form action="#">
                <div class="cart-table clearfix">
                   <div class="cart-table__col">
-                     <div class="cart-table__head">
-                        <div class="cart-table__title">НАИМЕНОВАНИЕ</div>
-                        <div class="cart-table__title">Цена за шт.</div>
-                        <div class="cart-table__title">Тираж</div>
-                        <div class="cart-table__title">Нанесение</div>
-                        <div class="cart-table__title">Примечание</div>
-                        <div class="cart-table__title">Итого</div>
+                     <div class="cart-table__body">
+                        <div class="cart-table__head">
+                           <div class="cart-table__title">НАИМЕНОВАНИЕ</div>
+                           <div class="cart-table__title">Цена за шт.</div>
+                           <div class="cart-table__title">Тираж</div>
+                           <div class="cart-table__title">Нанесение</div>
+                           <div class="cart-table__title">Примечание</div>
+                           <div class="cart-table__title">Итого</div>
+                        </div>
+                        <div class="cart-table__in">
+                           <div class="cart-table__item">
+                              <div class="cart-table__item-pic-wrap">
+                                 <div class="cart-table__item-pic">
+                                    <img src="images/slide-image1.png" alt="img">
+                                 </div>
+                              </div>
+                              <div class="cart-table__item-name">
+                                 <div class="cart-table__item-article">Арт . <span>5795445</span></div>
+                                 <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
+                              </div>
+                              <div class="cart-table__item-price">350,00</div>
+                              <div class="cart-table__item-count">
+                                 <input type="text" placeholder="20">
+                              </div>
+                              <div class="cart-table__item-switch">
+                                 <input type="checkbox" class="switch" id="item-switch-1">
+                                 <label for="item-switch-1"></label>
+                              </div>
+                              <div class="cart-table__item-option switch-option">
+                                 <input type="checkbox" id="item-option-1">
+                                 <label for="item-option-1">+</label>
+                              </div>
+                              <div class="cart-table__item-result">
+                                 <span>7000,00</span>
+                                 <button class="cart-table__item-cancel-btn" type="button">
+                                    <i class="sprite sprite-cancel"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="cart-table__item">
+                              <div class="cart-table__item-pic-wrap">
+                                 <div class="cart-table__item-pic">
+                                    <img src="images/slide-image1.png" alt="img">
+                                 </div>
+                              </div>
+                              <div class="cart-table__item-name">
+                                 <div class="cart-table__item-article">Арт . <span>5795445</span></div>
+                                 <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
+                              </div>
+                              <div class="cart-table__item-price">350,00</div>
+                              <div class="cart-table__item-count">
+                                 <input type="text" placeholder="20">
+                              </div>
+                              <div class="cart-table__item-switch">
+                                 <input type="checkbox" class="switch" id="item-switch-2">
+                                 <label for="item-switch-2"></label>
+                              </div>
+                              <div class="cart-table__item-option switch-option">
+                                 <input type="checkbox" id="item-option-2">
+                                 <label for="item-option-2">+</label>
+                              </div>
+                              <div class="cart-table__item-result">
+                                 <span>7000,00</span>
+                                 <button class="cart-table__item-cancel-btn" type="button">
+                                    <i class="sprite sprite-cancel"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="cart-table__item">
+                              <div class="cart-table__item-pic-wrap">
+                                 <div class="cart-table__item-pic">
+                                    <img src="images/slide-image1.png" alt="img">
+                                 </div>
+                              </div>
+                              <div class="cart-table__item-name">
+                                 <div class="cart-table__item-article">Арт . <span>5795445</span></div>
+                                 <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
+                              </div>
+                              <div class="cart-table__item-price">350,00</div>
+                              <div class="cart-table__item-count">
+                                 <input type="text" placeholder="20">
+                              </div>
+                              <div class="cart-table__item-switch">
+                                 <input type="checkbox" checked class="switch" id="item-switch-3">
+                                 <label for="item-switch-3"></label>
+                              </div>
+                              <div class="cart-table__item-option switch-option">
+                                 <input type="checkbox" id="item-option-3">
+                                 <label for="item-option-3">+</label>
+                              </div>
+                              <div class="cart-table__item-result">
+                                 <span>7000,00</span>
+                                 <button class="cart-table__item-cancel-btn" type="button">
+                                    <i class="sprite sprite-cancel"></i>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
                      </div>
-                     <div class="cart-table__in">
-                        <div class="cart-table__item">
-                           <div class="cart-table__item-pic-wrap">
-                              <div class="cart-table__item-pic">
-                                 <img src="images/slide-image1.png" alt="img">
-                              </div>
-                           </div>
-                           <div class="cart-table__item-name">
-                              <div class="cart-table__item-article">Арт . <span>5795445</span></div>
-                              <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
-                           </div>
-                           <div class="cart-table__item-price">350,00</div>
-                           <div class="cart-table__item-count">
-                              <input type="text" placeholder="20">
-                           </div>
-                           <div class="cart-table__item-switch">
-                              <input type="checkbox" class="switch" id="item-switch-1">
-                              <label for="item-switch-1"></label>
-                           </div>
-                           <div class="cart-table__item-option switch-option">
-                              <input type="checkbox" id="item-option-1">
-                              <label for="item-option-1">+</label>
-                           </div>
-                           <div class="cart-table__item-result">
-                              <span>7000,00</span>
-                              <button class="cart-table__item-cancel-btn" type="button">
-                                 <i class="sprite sprite-cancel"></i>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="cart-table__item">
-                           <div class="cart-table__item-pic-wrap">
-                              <div class="cart-table__item-pic">
-                                 <img src="images/slide-image1.png" alt="img">
-                              </div>
-                           </div>
-                           <div class="cart-table__item-name">
-                              <div class="cart-table__item-article">Арт . <span>5795445</span></div>
-                              <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
-                           </div>
-                           <div class="cart-table__item-price">350,00</div>
-                           <div class="cart-table__item-count">
-                              <input type="text" placeholder="20">
-                           </div>
-                           <div class="cart-table__item-switch">
-                              <input type="checkbox" class="switch" id="item-switch-2">
-                              <label for="item-switch-2"></label>
-                           </div>
-                           <div class="cart-table__item-option switch-option">
-                              <input type="checkbox" id="item-option-2">
-                              <label for="item-option-2">+</label>
-                           </div>
-                           <div class="cart-table__item-result">
-                              <span>7000,00</span>
-                              <button class="cart-table__item-cancel-btn" type="button">
-                                 <i class="sprite sprite-cancel"></i>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="cart-table__item">
-                           <div class="cart-table__item-pic-wrap">
-                              <div class="cart-table__item-pic">
-                                 <img src="images/slide-image1.png" alt="img">
-                              </div>
-                           </div>
-                           <div class="cart-table__item-name">
-                              <div class="cart-table__item-article">Арт . <span>5795445</span></div>
-                              <p>Футболка IMPERIAL 190 зеленое яблоко, размер S</p>
-                           </div>
-                           <div class="cart-table__item-price">350,00</div>
-                           <div class="cart-table__item-count">
-                              <input type="text" placeholder="20">
-                           </div>
-                           <div class="cart-table__item-switch">
-                              <input type="checkbox" checked class="switch" id="item-switch-3">
-                              <label for="item-switch-3"></label>
-                           </div>
-                           <div class="cart-table__item-option switch-option">
-                              <input type="checkbox" id="item-option-3">
-                              <label for="item-option-3">+</label>
-                           </div>
-                           <div class="cart-table__item-result">
-                              <span>7000,00</span>
-                              <button class="cart-table__item-cancel-btn" type="button">
-                                 <i class="sprite sprite-cancel"></i>
-                              </button>
-                           </div>
-                        </div>
-                     </div>
+
                   </div>
+
                   <div class="cart-table__col">
                      <div class="cart-table__result">
-                        <div class="cart-table__result-price"><span>21 000,00</span>* руб.</div>
+                        <div class="cart-table__result-price"><span>21 000,00</span><sup>*</sup> руб.</div>
                         <div class="cart-table__result-actions">
                            <button class="cart-table__result-submit btn-red" type="button">ОФОРМИТЬ ЗАКАЗ</button>
                            <button type="button" class="cart-table__result-actions-btn js-mockup-popup-open"><i
